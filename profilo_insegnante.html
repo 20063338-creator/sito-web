@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marco Rossi — Profilo tutor · MusicHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-box">
+      <a class="brand" href="index.html">🎵 MusicHub</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="strumenti.html">Strumenti</a></li>
+          <li><a href="corsi.html">Lezioni</a></li>
+        </ul>
+        <div class="nav-azioni">
+          <button id="tema">🌙</button>
+          <a href="login.html">Accedi</a>
+          <a href="registrazione.html">Registrati</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="container py-2">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb-custom">
+        <li class="breadcrumb-item-custom"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item-custom"><a href="corsi.html">Corsi e Tutor</a></li>
+        <li class="breadcrumb-item-custom attivo">Marco Rossi</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="container py-4">
+    <div class="row g-4">
+
+      <!-- ===================== MAIN ===================== -->
+      <main class="col-lg-8">
+
+        <!-- Intestazione profilo -->
+        <div class="profilo-intestazione">
+          <div class="avatar-lg flex-shrink-0">MR</div>
+          <div class="profilo-info">
+            <h1 class="profilo-nome">Marco Rossi</h1>
+            <p class="profilo-ruolo">Insegnante di chitarra e pianoforte · Milano</p>
+            <div class="profilo-badge-lista">
+              <span class="ins-voto">🎸 Chitarra acustica</span>
+              <span class="ins-voto">🎸 Chitarra elettrica</span>
+              <span class="ins-voto">🎹 Pianoforte</span>
+            </div>
+            <div class="profilo-meta">
+              <span>⭐ 4.8 / 5</span>
+              <span>24 recensioni</span>
+              <span>10 anni di esperienza</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chi sono -->
+        <section class="profilo-sezione">
+          <h2 class="sezione-titolo">Chi sono</h2>
+          <p class="profilo-testo">Sono un chitarrista con oltre 10 anni di esperienza nell'insegnamento, sia a bambini che ad adulti. Ho studiato al Conservatorio di Milano e ho suonato in vari gruppi rock e jazz nel corso degli anni.</p>
+          <p class="profilo-testo">Le mie lezioni sono pratiche e progressive: si parte dalle basi fino ad arrivare a brani veri e propri nel più breve tempo possibile. Adatto il programma alle esigenze di ogni studente.</p>
+        </section>
+
+        <!-- Corsi disponibili -->
+        <section class="profilo-sezione">
+          <h2 class="sezione-titolo">Corsi disponibili</h2>
+          <div class="row g-3">
+
+            <div class="col-sm-6">
+              <div class="scheda-corso">
+                <h3 class="scheda-corso-titolo">Chitarra per principianti</h3>
+                <p class="scheda-corso-desc">Parti da zero e impara le basi: accordi aperti, ritmo e le prime canzoni.</p>
+                <div class="scheda-corso-footer">
+                  <span class="scheda-corso-meta">60 min · Principiante</span>
+                  <span class="scheda-corso-prezzo">€ 30</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="scheda-corso">
+                <h3 class="scheda-corso-titolo">Chitarra intermedia</h3>
+                <p class="scheda-corso-desc">Barre, scale pentatoniche, improvvisazione base e analisi di brani.</p>
+                <div class="scheda-corso-footer">
+                  <span class="scheda-corso-meta">60 min · Intermedio</span>
+                  <span class="scheda-corso-prezzo">€ 35</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="scheda-corso">
+                <h3 class="scheda-corso-titolo">Pianoforte per adulti</h3>
+                <p class="scheda-corso-desc">Lezione pensata per adulti che iniziano da zero, con brani moderni e classici.</p>
+                <div class="scheda-corso-footer">
+                  <span class="scheda-corso-meta">60 min · Principiante</span>
+                  <span class="scheda-corso-prezzo">€ 30</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="scheda-corso">
+                <h3 class="scheda-corso-titolo">Teoria musicale</h3>
+                <p class="scheda-corso-desc">Solfeggio, scale, intervalli e armonia di base applicata agli strumenti.</p>
+                <div class="scheda-corso-footer">
+                  <span class="scheda-corso-meta">45 min · Tutti i livelli</span>
+                  <span class="scheda-corso-prezzo">€ 25</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Recensioni -->
+        <section class="profilo-sezione">
+          <h2 class="sezione-titolo">Recensioni</h2>
+          <div class="recensioni-lista">
+
+            <div class="scheda-recensione">
+              <div class="recensione-header">
+                <span class="recensione-autore">Giulia M.</span>
+                <span class="ins-voto">⭐ 5/5</span>
+              </div>
+              <p class="recensione-testo">Marco è un insegnante fantastico. In pochi mesi sono riuscita a suonare i miei brani preferiti. Molto paziente e chiaro nelle spiegazioni.</p>
+            </div>
+
+            <div class="scheda-recensione">
+              <div class="recensione-header">
+                <span class="recensione-autore">Luca P.</span>
+                <span class="ins-voto">⭐ 4/5</span>
+              </div>
+              <p class="recensione-testo">Buon metodo, lezioni ben strutturate. A volte si va un po' veloci ma basta dirlo e adatta il ritmo subito.</p>
+            </div>
+
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ===================== SIDEBAR ===================== -->
+      <aside class="col-lg-4">
+        <div class="sidebar-prenotazione">
+
+          <h2 class="sidebar-titolo">Prenota una lezione</h2>
+          <p class="sidebar-sottotitolo">Scegli il corso, il giorno e l'orario che preferisci</p>
+
+          <div class="campo-gruppo">
+            <label for="sel-corso" class="campo-label">Corso</label>
+            <select id="sel-corso" class="campo-input">
+              <option value="">Scegli un corso…</option>
+              <option>Chitarra per principianti — € 30</option>
+              <option>Chitarra intermedia — € 35</option>
+              <option>Pianoforte per adulti — € 30</option>
+              <option>Teoria musicale — € 25</option>
+            </select>
+          </div>
+
+          <div class="campo-gruppo">
+            <label for="sel-data" class="campo-label">Data</label>
+            <input type="date" id="sel-data" class="campo-input">
+          </div>
+
+          <div class="campo-gruppo">
+            <p class="campo-label">Orario disponibile</p>
+            <div class="slot-lista">
+              <span class="slot-orario">09:00</span>
+              <span class="slot-orario">10:00</span>
+              <span class="slot-orario">11:00</span>
+              <span class="slot-orario">14:00</span>
+              <span class="slot-orario">15:00</span>
+              <span class="slot-orario">17:00</span>
+              <span class="slot-orario selezionato">18:00</span>
+            </div>
+          </div>
+
+          <div class="avviso-login">
+            ℹ️ Per prenotare devi essere <a href="login.html" class="auth-link-oro">registrato e loggato</a>.
+          </div>
+
+          <a href="login.html" class="btn-primary auth-btn-full">Prenota lezione</a>
+
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-box">
+        <a class="brand" href="index.html">🎵 MusicHub</a>
+        <small class="footer-copy">© 2026 — Università</small>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="strumenti.html">Strumenti</a>
+          <a href="corsi.html">Lezioni</a>
+          <a href="login.html">Accedi</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /* Tema chiaro/scuro */
+    const btn  = document.getElementById('tema');
+    const html = document.documentElement;
+    if (localStorage.getItem('tema') === 'chiaro') {
+      html.setAttribute('data-tema', 'chiaro');
+      btn.textContent = '☀️';
+    }
+    btn.addEventListener('click', () => {
+      const t = html.getAttribute('data-tema');
+      if (t === 'chiaro') {
+        html.removeAttribute('data-tema');
+        btn.textContent = '🌙';
+        localStorage.setItem('tema', 'scuro');
+      } else {
+        html.setAttribute('data-tema', 'chiaro');
+        btn.textContent = '☀️';
+        localStorage.setItem('tema', 'chiaro');
+      }
+    });
+
+    /* Slot orario: click per selezionare */
+    document.querySelectorAll('.slot-orario').forEach(slot => {
+      slot.addEventListener('click', () => {
+        document.querySelectorAll('.slot-orario').forEach(s => s.classList.remove('selezionato'));
+        slot.classList.add('selezionato');
+      });
+    });
+  </script>
+</body>
+</html>

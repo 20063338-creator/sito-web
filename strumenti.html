@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strumenti in vendita — MusicHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-box">
+      <a class="brand" href="index.html">🎵 MusicHub</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="strumenti.html">Strumenti</a></li>
+          <li><a href="corsi.html">Lezioni</a></li>
+        </ul>
+        <div class="nav-azioni">
+          <button id="tema">🌙</button>
+          <a href="login.html">Accedi</a>
+          <a href="registrazione.html">Registrati</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+
+    <div class="row mb-4 align-items-end">
+      <div class="col-md-6">
+        <h1 class="fw-bold h3 mb-1">Strumenti a portata di mano</h1>
+        <p class="text-muted small mb-0">Usati o nuovi. Di marca. Di qualità. Scegli il tuo.</p>
+      </div>
+      <div class="col-md-6 mt-3 mt-md-0">
+        <div class="input-group">
+          <input type="search" class="form-control" placeholder="Cerca per nome, marca o descrizione…" aria-label="Cerca strumenti">
+          <button class="btn btn-dark" type="button">Cerca</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <aside class="col-lg-3">
+        <div class="filter-sidebar border rounded-3 p-3">
+          <h2 class="h6 fw-bold mb-3">Filtra per strumento</h2>
+
+          <div class="mb-3">
+            <label for="filtro-categoria" class="form-label small fw-semibold">Categoria</label>
+            <select id="filtro-categoria" class="form-select form-select-sm">
+              <option value="">Tutte le categorie</option>
+              <option value="chitarre">Chitarre</option>
+              <option value="tastiere">Tastiere e Pianoforti</option>
+              <option value="percussioni">Percussioni</option>
+              <option value="fiati">Fiati</option>
+              <option value="archi">Archi</option>
+              <option value="accessori">Accessori</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="filtro-tipo" class="form-label small fw-semibold">Tipo</label>
+            <select id="filtro-tipo" class="form-select form-select-sm">
+              <option value="">Tutti i tipi</option>
+              <option value="acustica">Acustica</option>
+              <option value="elettrica">Elettrica</option>
+              <option value="classica">Classica</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label small fw-semibold">Fascia di prezzo</label>
+            <div class="d-flex flex-column gap-1">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="prezzo" id="p-tutti" checked>
+                <label class="form-check-label" for="p-tutti">Tutti i prezzi</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="prezzo" id="p-1">
+                <label class="form-check-label" for="p-1">Fino a € 100</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="prezzo" id="p-2">
+                <label class="form-check-label" for="p-2">€ 100 – € 300</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="prezzo" id="p-3">
+                <label class="form-check-label" for="p-3">€ 300 – € 600</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="prezzo" id="p-4">
+                <label class="form-check-label" for="p-4">Oltre € 600</label>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-sm btn-outline-secondary w-100">Azzera filtri</button>
+        </div>
+      </aside>
+
+      <main class="col-lg-9">
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted small">6 strumenti trovati</span>
+          <select class="form-select form-select-sm w-auto">
+            <option>Più recenti</option>
+            <option>Prezzo: crescente</option>
+            <option>Prezzo: decrescente</option>
+          </select>
+        </div>
+
+        <div class="row g-3">
+
+          <div class="col-sm-6 col-xl-4">
+            <article class="card h-100 border product-card">
+              <div class="card-img-placeholder d-flex align-items-center justify-content-center">
+                <span class="fs-1">🎸</span>
+              </div>
+              <div class="card-body pb-1">
+                <p class="text-muted small mb-1">Chitarre acustiche</p>
+                <h2 class="h6 card-title fw-semibold mb-1">Fender CD-60S</h2>
+                <p class="text-muted small mb-2">Chitarra acustica in ottimo stato. Acquistata 2 anni fa, poco usata.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold">€ 220,00</span>
+                  <span class="badge bg-light text-dark border">Usato</span>
+                </div>
+              </div>
+              <div class="card-footer bg-white border-top-0 pt-2 pb-3">
+                <a href="login.html" class="btn btn-sm btn-dark w-100">Acquista</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-xl-4">
+            <article class="card h-100 border product-card">
+              <div class="card-img-placeholder d-flex align-items-center justify-content-center">
+                <span class="fs-1">🎹</span>
+              </div>
+              <div class="card-body pb-1">
+                <p class="text-muted small mb-1">Tastiere</p>
+                <h2 class="h6 card-title fw-semibold mb-1">Yamaha PSR-E363</h2>
+                <p class="text-muted small mb-2">61 tasti, 574 voci strumentali. Ideale per principianti.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold">€ 180,00</span>
+                  <span class="badge bg-light text-dark border">Nuovo</span>
+                </div>
+              </div>
+              <div class="card-footer bg-white border-top-0 pt-2 pb-3">
+                <a href="login.html" class="btn btn-sm btn-dark w-100">Acquista</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-xl-4">
+            <article class="card h-100 border product-card">
+              <div class="card-img-placeholder d-flex align-items-center justify-content-center">
+                <span class="fs-1">🥁</span>
+              </div>
+              <div class="card-body pb-1">
+                <p class="text-muted small mb-1">Batterie elettroniche</p>
+                <h2 class="h6 card-title fw-semibold mb-1">Alesis Nitro Mesh</h2>
+                <p class="text-muted small mb-2">Pad in mesh, silenziosa e reattiva. Perfetta per casa.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold">€ 350,00</span>
+                  <span class="badge bg-light text-dark border">Nuovo</span>
+                </div>
+              </div>
+              <div class="card-footer bg-white border-top-0 pt-2 pb-3">
+                <a href="login.html" class="btn btn-sm btn-dark w-100">Acquista</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-xl-4">
+            <article class="card h-100 border product-card">
+              <div class="card-img-placeholder d-flex align-items-center justify-content-center">
+                <span class="fs-1">🎺</span>
+              </div>
+              <div class="card-body pb-1">
+                <p class="text-muted small mb-1">Fiati</p>
+                <h2 class="h6 card-title fw-semibold mb-1">Bach TR300H</h2>
+                <p class="text-muted small mb-2">Tromba in Si bemolle, ottone laccato. Adatta allo studio.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold">€ 290,00</span>
+                  <span class="badge bg-light text-dark border">Usato</span>
+                </div>
+              </div>
+              <div class="card-footer bg-white border-top-0 pt-2 pb-3">
+                <a href="login.html" class="btn btn-sm btn-dark w-100">Acquista</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-xl-4">
+            <article class="card h-100 border product-card">
+              <div class="card-img-placeholder d-flex align-items-center justify-content-center">
+                <span class="fs-1">🎻</span>
+              </div>
+              <div class="card-body pb-1">
+                <p class="text-muted small mb-1">Archi</p>
+                <h2 class="h6 card-title fw-semibold mb-1">Stentor Student II</h2>
+                <p class="text-muted small mb-2">Violino 4/4 per studenti. Include archetto e custodia.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold">€ 150,00</span>
+                  <span class="badge bg-light text-dark border">Usato</span>
+                </div>
+              </div>
+              <div class="card-footer bg-white border-top-0 pt-2 pb-3">
+                <a href="login.html" class="btn btn-sm btn-dark w-100">Acquista</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-sm-6 col-xl-4">
+            <article class="card h-100 border product-card">
+              <div class="card-img-placeholder d-flex align-items-center justify-content-center">
+                <span class="fs-1">🎸</span>
+              </div>
+              <div class="card-body pb-1">
+                <p class="text-muted small mb-1">Chitarre elettriche</p>
+                <h2 class="h6 card-title fw-semibold mb-1">Squier Stratocaster</h2>
+                <p class="text-muted small mb-2">Starter pack completo di amplificatore e cavo.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold">€ 260,00</span>
+                  <span class="badge bg-light text-dark border">Nuovo</span>
+                </div>
+              </div>
+              <div class="card-footer bg-white border-top-0 pt-2 pb-3">
+                <a href="login.html" class="btn btn-sm btn-dark w-100">Acquista</a>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-box">
+        <a class="brand" href="index.html">🎵 MusicHub</a>
+        <small class="footer-copy">20063338 — Progetto</small>
+        <nav class="footer-nav">
+          <a href="strumenti.html">Strumenti</a>
+          <a href="corsi.html">Lezioni</a>
+          <a href="login.html">Accedi</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btn  = document.getElementById('tema');
+    const html = document.documentElement;
+    if (localStorage.getItem('tema') === 'chiaro') {
+      html.setAttribute('data-tema', 'chiaro');
+      btn.textContent = '☀️';
+    }
+    btn.addEventListener('click', () => {
+      const t = html.getAttribute('data-tema');
+      if (t === 'chiaro') {
+        html.removeAttribute('data-tema');
+        btn.textContent = '🌙';
+        localStorage.setItem('tema', 'scuro');
+      } else {
+        html.setAttribute('data-tema', 'chiaro');
+        btn.textContent = '☀️';
+        localStorage.setItem('tema', 'chiaro');
+      }
+    });
+  </script>
+</body>
+</html>

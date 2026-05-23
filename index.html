@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MusicHub - Strumenti e Lezioni di Musica</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-box">
+      <a class="brand" href="index.html">🎵 MusicHub</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="strumenti.html">Strumenti</a></li>
+          <li><a href="corsi.html">Lezioni</a></li>
+        </ul>
+        <div class="nav-azioni">
+          <button id="tema">🌙</button>
+          <a href="login.html">Accedi</a>
+          <a href="registrazione.html">Registrati</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-box">
+          <div class="hero-testo">
+            <h1 class="hero-title">Impara a suonare gli strumenti <span class="accento">che vuoi</span>.</h1>
+            <p class="hero-desc">TESTO DA METTERE</p>
+            <div class="hero-azioni">
+              <a href="strumenti.html" class="btn-primary">Vedi strumenti</a>
+              <a href="corsi.html" class="btn-outline">Lezioni</a>
+            </div>
+          </div>
+          <div class="hero-foto" aria-hidden="true">
+            <div class="row g-3 align-items-center">
+              <div class="col-6">
+                <div class="foto-card card-tall">
+                  <img src="Immagini/chitarra.jpg" class="foto">
+                </div>
+              </div>
+              <div class="col-6 pt-4">
+                <div class="foto-card card-square mb-3">
+                  <img src="Immagini/violino.jpg" class="foto">
+                </div>
+                <div class="foto-card card-square">
+                  <img src="Immagini/tromba.jpg" class="foto">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRUMENTI CONSIGLIATI -->
+    <section class="catalogo">
+      <div class="container">
+        <div class="intestazione">
+          <h2 class="titolo-sezione">Strumenti consigliati</h2>
+          <a href="strumenti.html" class="vedi-tutti">Vedi tutti →</a>
+        </div>
+        <div class="griglia">
+
+          <article class="scheda">
+            <div class="scheda-img">🎹</div>
+            <div class="scheda-info">
+              <p class="categoria">Tastiere</p>
+              <h3 class="nome">Yamaha PSR-E363</h3>
+              <p class="prezzo">€ 180,00</p>
+            </div>
+            <div class="scheda-footer">
+              <a href="strumenti.html" class="btn-scheda">Dettagli</a>
+            </div>
+          </article>
+
+          <article class="scheda">
+            <div class="scheda-img">🎸</div>
+            <div class="scheda-info">
+              <p class="categoria">Chitarre</p>
+              <h3 class="nome">Fender CD-60S</h3>
+              <p class="prezzo">€ 220,00</p>
+            </div>
+            <div class="scheda-footer">
+              <a href="strumenti.html" class="btn-scheda">Dettagli</a>
+            </div>
+          </article>
+
+          <article class="scheda">
+            <div class="scheda-img">🥁</div>
+            <div class="scheda-info">
+              <p class="categoria">Percussioni</p>
+              <h3 class="nome">Alesis Nitro Mesh</h3>
+              <p class="prezzo">€ 350,00</p>
+            </div>
+            <div class="scheda-footer">
+              <a href="strumenti.html" class="btn-scheda">Dettagli</a>
+            </div>
+          </article>
+
+          <article class="scheda">
+            <div class="scheda-img">🎺</div>
+            <div class="scheda-info">
+              <p class="categoria">Fiati</p>
+              <h3 class="nome">Bach TR300H</h3>
+              <p class="prezzo">€ 290,00</p>
+            </div>
+            <div class="scheda-footer">
+              <a href="strumenti.html" class="btn-scheda">Dettagli</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INSEGNANTI -->
+    <section class="insegnanti">
+      <div class="container">
+        <div class="intestazione">
+          <h2 class="titolo-sezione">Insegnanti</h2>
+          <a href="corsi.html" class="vedi-tutti">Vedi tutti →</a>
+        </div>
+        <div class="griglia-ins">
+
+          <div class="card-ins">
+            <div class="card-ins-corpo">
+              <div class="avatar">MR</div>
+              <div class="ins-info">
+                <h3 class="ins-nome">Marco Rossi</h3>
+                <p class="ins-materie">Chitarra · Pianoforte</p>
+                <span class="ins-voto">⭐ 4.8</span>
+              </div>
+            </div>
+            <div class="scheda-footer">
+              <a href="profilo_insegnante.html" class="btn-scheda">Profilo</a>
+            </div>
+          </div>
+
+          <div class="card-ins">
+            <div class="card-ins-corpo">
+              <div class="avatar">LA</div>
+              <div class="ins-info">
+                <h3 class="ins-nome">Laura Alberti</h3>
+                <p class="ins-materie">Violino · Viola</p>
+                <span class="ins-voto">⭐ 4.9</span>
+              </div>
+            </div>
+            <div class="scheda-footer">
+              <a href="profilo_insegnante.html" class="btn-scheda">Profilo</a>
+            </div>
+          </div>
+
+          <div class="card-ins">
+            <div class="card-ins-corpo">
+              <div class="avatar">GT</div>
+              <div class="ins-info">
+                <h3 class="ins-nome">Giovanni Turchi</h3>
+                <p class="ins-materie">Batteria · Percussioni</p>
+                <span class="ins-voto">⭐ 4.7</span>
+              </div>
+            </div>
+            <div class="scheda-footer">
+              <a href="profilo_insegnante.html" class="btn-scheda">Profilo</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- COME INIZIARE -->
+    <section class="passi">
+      <div class="container">
+        <h2 class="titolo-sezione">Come iniziare</h2>
+        <div class="passi-lista">
+
+          <div class="passo">
+            <div class="passo-num">1</div>
+            <h3 class="passo-titolo">Iscriviti</h3>
+            <p class="passo-testo">Un minuto. Gratis. Niente di strano.</p>
+          </div>
+
+          <div class="passo">
+            <div class="passo-num">2</div>
+            <h3 class="passo-titolo">Sfoglia</h3>
+            <p class="passo-testo">Strumenti usati e nuovi. Insegnanti bravi. Filtra come vuoi.</p>
+          </div>
+
+          <div class="passo">
+            <div class="passo-num">3</div>
+            <h3 class="passo-titolo">Compra o prenota</h3>
+            <p class="passo-testo">Paghi, ricevi, impari. Semplice così.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-box">
+        <a class="brand" href="index.html">🎵 MusicHub</a>
+        <small class="footer-copy">20063338 — Progetto</small>
+        <nav class="footer-nav">
+          <a href="strumenti.html">Strumenti</a>
+          <a href="corsi.html">Lezioni</a>
+          <a href="login.html">Accedi</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btn  = document.getElementById('tema');
+    const html = document.documentElement;
+    if (localStorage.getItem('tema') === 'chiaro') {
+      html.setAttribute('data-tema', 'chiaro');
+      btn.textContent = '☀️';
+    }
+    btn.addEventListener('click', () => {
+      const t = html.getAttribute('data-tema');
+      if (t === 'chiaro') {
+        html.removeAttribute('data-tema');
+        btn.textContent = '🌙';
+        localStorage.setItem('tema', 'scuro');
+      } else {
+        html.setAttribute('data-tema', 'chiaro');
+        btn.textContent = '☀️';
+        localStorage.setItem('tema', 'chiaro');
+      }
+    });
+  </script>
+
+</body>
+</html>

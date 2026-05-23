@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — MusicHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-box">
+      <a class="brand" href="index.html">🎵 MusicHub</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="strumenti.html">Strumenti</a></li>
+          <li><a href="corsi.html">Lezioni</a></li>
+        </ul>
+        <div class="nav-azioni">
+          <button id="tema">🌙</button>
+          <span>Ciao, <strong>Mario</strong></span>
+          <a href="login.html">Esci</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <div class="row g-4">
+
+      <!-- Sidebar navigazione: Bootstrap pills gestisce il tab switching -->
+      <aside class="col-lg-3">
+        <div class="border rounded-3 p-3 bg-white">
+          <div class="d-flex align-items-center gap-3 mb-3 pb-3 border-bottom">
+            <div class="avatar flex-shrink-0">MR</div>
+            <div>
+              <p class="fw-semibold mb-0 small">Mario Rossi</p>
+              <p class="text-muted mb-0 testo-ruolo">Cliente</p>
+            </div>
+          </div>
+          <nav>
+            <div class="nav flex-column nav-pills gap-1" id="dashboard-tabs" role="tablist">
+              <button class="btn btn-sm w-100 text-start nav-link active" data-bs-toggle="pill" data-bs-target="#tab-panoramica" role="tab">📊 Panoramica</button>
+              <button class="btn btn-sm w-100 text-start nav-link" data-bs-toggle="pill" data-bs-target="#tab-acquisti" role="tab">🎸 I miei acquisti</button>
+              <button class="btn btn-sm w-100 text-start nav-link" data-bs-toggle="pill" data-bs-target="#tab-lezioni" role="tab">📅 Le mie lezioni</button>
+              <button class="btn btn-sm w-100 text-start nav-link" data-bs-toggle="pill" data-bs-target="#tab-profilo" role="tab">👤 Il mio profilo</button>
+            </div>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Contenuto principale -->
+      <main class="col-lg-9">
+        <div class="tab-content">
+
+          <!-- Panoramica -->
+          <div class="tab-pane fade show active" id="tab-panoramica" role="tabpanel">
+            <h1 class="h4 fw-bold mb-4">Buongiorno, Mario 👋</h1>
+
+            <div class="row g-3 mb-4">
+              <div class="col-sm-4">
+                <div class="stat-card">
+                  <p class="stat-valore">3</p>
+                  <p class="stat-etichetta">Strumenti acquistati</p>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="stat-card">
+                  <p class="stat-valore">7</p>
+                  <p class="stat-etichetta">Lezioni prenotate</p>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="stat-card">
+                  <p class="stat-valore">2</p>
+                  <p class="stat-etichetta">Tutor seguiti</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h2 class="sezione-titolo">Prossima lezione</h2>
+              <div class="border rounded-3 p-3 bg-white d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="avatar flex-shrink-0">MR</div>
+                  <div>
+                    <p class="fw-semibold mb-0 small">Chitarra per principianti</p>
+                    <p class="text-muted small mb-0">con Marco Rossi</p>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <p class="fw-semibold mb-0 small">Lunedì 19 maggio 2026</p>
+                  <p class="text-muted small mb-0">ore 10:00 · 60 min</p>
+                </div>
+                <button class="btn btn-sm btn-outline-secondary">Annulla</button>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="sezione-titolo">Ultimi acquisti</h2>
+              <div class="border rounded-3 overflow-hidden">
+                <div class="table-responsive">
+                <table class="table table-hover mb-0 small">
+                  <thead class="table-light">
+                    <tr>
+                      <th scope="col">Strumento</th>
+                      <th scope="col">Data</th>
+                      <th scope="col" class="text-end">Importo</th>
+                      <th scope="col">Stato</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Fender CD-60S</td>
+                      <td class="text-muted">02/05/2026</td>
+                      <td class="text-end">€ 220,00</td>
+                      <td><span class="badge bg-success">Consegnato</span></td>
+                    </tr>
+                    <tr>
+                      <td>Yamaha PSR-E363</td>
+                      <td class="text-muted">14/04/2026</td>
+                      <td class="text-end">€ 180,00</td>
+                      <td><span class="badge bg-success">Consegnato</span></td>
+                    </tr>
+                    <tr>
+                      <td>Stentor Student II</td>
+                      <td class="text-muted">01/03/2026</td>
+                      <td class="text-end">€ 150,00</td>
+                      <td><span class="badge bg-success">Consegnato</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Acquisti -->
+          <div class="tab-pane fade" id="tab-acquisti" role="tabpanel">
+            <h1 class="h4 fw-bold mb-4">I miei acquisti</h1>
+            <div class="border rounded-3 overflow-hidden">
+              <div class="table-responsive">
+              <table class="table table-hover mb-0 small">
+                <thead class="table-light">
+                  <tr>
+                    <th scope="col">Strumento</th>
+                    <th scope="col">Venditore</th>
+                    <th scope="col">Data</th>
+                    <th scope="col" class="text-end">Importo</th>
+                    <th scope="col">Stato</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Fender CD-60S</td>
+                    <td class="text-muted">Luigi V.</td>
+                    <td class="text-muted">02/05/2026</td>
+                    <td class="text-end">€ 220,00</td>
+                    <td><span class="badge bg-success">Consegnato</span></td>
+                  </tr>
+                  <tr>
+                    <td>Yamaha PSR-E363</td>
+                    <td class="text-muted">MusicHub Store</td>
+                    <td class="text-muted">14/04/2026</td>
+                    <td class="text-end">€ 180,00</td>
+                    <td><span class="badge bg-success">Consegnato</span></td>
+                  </tr>
+                  <tr>
+                    <td>Stentor Student II</td>
+                    <td class="text-muted">Anna B.</td>
+                    <td class="text-muted">01/03/2026</td>
+                    <td class="text-end">€ 150,00</td>
+                    <td><span class="badge bg-success">Consegnato</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lezioni -->
+          <div class="tab-pane fade" id="tab-lezioni" role="tabpanel">
+            <h1 class="h4 fw-bold mb-4">Le mie lezioni</h1>
+
+            <h2 class="etichetta-sezione mb-2">Prossime</h2>
+            <div class="d-flex flex-column gap-2 mb-4">
+              <div class="border rounded-3 p-3 bg-white d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <div>
+                  <p class="fw-semibold small mb-0">Chitarra per principianti — Marco Rossi</p>
+                  <p class="text-muted small mb-0">Lun 19 maggio 2026 · ore 10:00 · 60 min</p>
+                </div>
+                <button class="btn btn-sm btn-outline-secondary">Annulla</button>
+              </div>
+              <div class="border rounded-3 p-3 bg-white d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <div>
+                  <p class="fw-semibold small mb-0">Pianoforte per adulti — Sara Fontana</p>
+                  <p class="text-muted small mb-0">Gio 22 maggio 2026 · ore 15:00 · 60 min</p>
+                </div>
+                <button class="btn btn-sm btn-outline-secondary">Annulla</button>
+              </div>
+            </div>
+
+            <h2 class="etichetta-sezione mb-2">Storico</h2>
+            <div class="border rounded-3 overflow-hidden">
+              <div class="table-responsive">
+              <table class="table table-hover mb-0 small">
+                <thead class="table-light">
+                  <tr>
+                    <th scope="col">Corso</th>
+                    <th scope="col">Tutor</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Durata</th>
+                    <th scope="col" class="text-end">Importo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Chitarra per principianti</td>
+                    <td class="text-muted">Marco Rossi</td>
+                    <td class="text-muted">05/05/2026</td>
+                    <td class="text-muted">60 min</td>
+                    <td class="text-end">€ 30,00</td>
+                  </tr>
+                  <tr>
+                    <td>Chitarra per principianti</td>
+                    <td class="text-muted">Marco Rossi</td>
+                    <td class="text-muted">28/04/2026</td>
+                    <td class="text-muted">60 min</td>
+                    <td class="text-end">€ 30,00</td>
+                  </tr>
+                  <tr>
+                    <td>Teoria musicale</td>
+                    <td class="text-muted">Marco Rossi</td>
+                    <td class="text-muted">10/04/2026</td>
+                    <td class="text-muted">45 min</td>
+                    <td class="text-end">€ 25,00</td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profilo -->
+          <div class="tab-pane fade" id="tab-profilo" role="tabpanel">
+            <h1 class="h4 fw-bold mb-4">Il mio profilo</h1>
+            <div class="border rounded-3 p-4 bg-white form-profilo">
+
+              <div class="mb-3">
+                <label for="profilo-nome" class="form-label small fw-semibold">Nome</label>
+                <input type="text" id="profilo-nome" class="form-control" value="Mario">
+              </div>
+              <div class="mb-3">
+                <label for="profilo-cognome" class="form-label small fw-semibold">Cognome</label>
+                <input type="text" id="profilo-cognome" class="form-control" value="Rossi">
+              </div>
+              <div class="mb-3">
+                <label for="profilo-email" class="form-label small fw-semibold">Email</label>
+                <input type="email" id="profilo-email" class="form-control" value="mario.rossi@email.it">
+              </div>
+              <div class="mb-3">
+                <label class="form-label small fw-semibold">Tipo di account</label>
+                <input type="text" class="form-control" value="Cliente" disabled>
+              </div>
+
+              <hr>
+
+              <p class="small fw-semibold mb-2">Cambia password</p>
+              <div class="mb-3">
+                <label for="profilo-vecchia-pw" class="form-label small">Password attuale</label>
+                <input type="password" id="profilo-vecchia-pw" class="form-control" placeholder="••••••••">
+              </div>
+              <div class="mb-4">
+                <label for="profilo-nuova-pw" class="form-label small">Nuova password</label>
+                <input type="password" id="profilo-nuova-pw" class="form-control" placeholder="Almeno 8 caratteri">
+              </div>
+
+              <button class="btn btn-dark">Salva modifiche</button>
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-box">
+        <a class="brand" href="index.html">🎵 MusicHub</a>
+        <small class="footer-copy">© 2026 — Università</small>
+        <nav class="footer-nav">
+          <a href="strumenti.html">Strumenti</a>
+          <a href="corsi.html">Lezioni</a>
+          <a href="login.html">Accedi</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS: necessario per tab e navbar hamburger -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btn  = document.getElementById('tema');
+    const html = document.documentElement;
+    if (localStorage.getItem('tema') === 'chiaro') {
+      html.setAttribute('data-tema', 'chiaro');
+      btn.textContent = '☀️';
+    }
+    btn.addEventListener('click', () => {
+      const t = html.getAttribute('data-tema');
+      if (t === 'chiaro') {
+        html.removeAttribute('data-tema');
+        btn.textContent = '🌙';
+        localStorage.setItem('tema', 'scuro');
+      } else {
+        html.setAttribute('data-tema', 'chiaro');
+        btn.textContent = '☀️';
+        localStorage.setItem('tema', 'chiaro');
+      }
+    });
+  </script>
+</body>
+</html>
