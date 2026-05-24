@@ -36,12 +36,19 @@ body {
   background-color: var(--blu);
   letter-spacing: -0.2px;
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main, .container.py-4 {
+  flex: 1;
 }
 
 a { color: inherit; text-decoration: none; }
 
-.text-muted { color: rgba(245,240,232,0.75) !important; }
-[data-tema="chiaro"] .text-muted { color: rgba(92,74,32,0.75) !important; }
+.text-muted { color: rgba(245,240,232,0.75); }
+[data-tema="chiaro"] .text-muted { color: rgba(92,74,32,0.75); }
 
 /* ===================== NAVBAR ===================== */
 .navbar {
@@ -100,6 +107,7 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 180px;
 }
 
 #tema {
@@ -327,6 +335,10 @@ a { color: inherit; text-decoration: none; }
   border-top: 1px solid var(--bordo);
 }
 
+[data-tema="chiaro"] .insegnanti {
+  background: #f5edd8;
+}
+
 .intestazione {
   display: flex;
   justify-content: space-between;
@@ -435,7 +447,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .card-ins {
-  background: var(--blu-medio);
+  background: #1e2f5c;
   border: 1px solid var(--bordo);
   border-radius: 14px;
   overflow: hidden;
@@ -445,18 +457,12 @@ a { color: inherit; text-decoration: none; }
 }
 .card-ins:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 28px rgba(201,168,76,0.1);
+  box-shadow: 0 8px 28px rgba(201,168,76,0.18);
 }
 
-.card-ins-corpo {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 20px 20px 12px;
-  flex: 1;
+[data-tema="chiaro"] .card-ins {
+  background: #ddd0b0;
 }
-
-.ins-info { min-width: 0; }
 
 .ins-nome {
   font-size: 0.95rem;
@@ -465,11 +471,42 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 4px;
 }
 
+[data-tema="chiaro"] .ins-nome {
+  color: #1a1208;
+}
+
 .ins-materie {
   color: var(--testo-muted);
   font-size: 0.82rem;
   margin: 0 0 8px;
 }
+
+[data-tema="chiaro"] .ins-materie {
+  color: #5c4020;
+}
+
+.card-ins .scheda-footer {
+  background: #1e2f5c;
+}
+
+[data-tema="chiaro"] .card-ins .scheda-footer {
+  background: #ede0c4;
+}
+
+.card-ins-corpo {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 20px 12px;
+  background: #1e2f5c;
+  flex: 1;
+}
+
+[data-tema="chiaro"] .card-ins-corpo {
+  background: #ddd0b0;
+}
+
+.ins-info { min-width: 0; }
 
 .ins-voto {
   display: inline-block;
@@ -496,37 +533,55 @@ a { color: inherit; text-decoration: none; }
   flex-shrink: 0;
 }
 
-/* ===================== PASSI ===================== */
+.card-ins .scheda-footer {
+  background: #1e2f5c;
+}
 .passi {
   padding: 80px 0;
-  background: var(--blu-medio);
+  background: #0d1b3e;
   border-top: 1px solid var(--bordo);
   border-bottom: 1px solid var(--bordo);
 }
 
+[data-tema="chiaro"] .passi {
+  background: #ddd0b0;
+  border-color: rgba(139,105,20,0.25);
+}
+
+.passi .titolo-sezione {
+  margin-bottom: 32px;
+}
+
 .passi-lista {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .passo {
-  flex: 1 1 calc(33.333% - 14px);
-  padding: 28px;
-  background: var(--blu);
-  border: 1px solid var(--bordo);
+  flex: 1 1 calc(33.333% - 12px);
+  padding: 22px;
+  background: linear-gradient(135deg, var(--blu-chiaro) 0%, rgba(201,168,76,0.08) 100%);
+  border: 1.5px solid var(--oro-glow);
   border-radius: 14px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
+
+[data-tema="chiaro"] .passo {
+  background: linear-gradient(135deg, #ddd0b0 0%, rgba(139,105,20,0.08) 100%);
+  border: 1.5px solid rgba(139,105,20,0.3);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
 .passo:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 32px rgba(201,168,76,0.1);
 }
 
 .passo-num {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background: var(--oro);
   color: var(--blu);
   border-radius: 50%;
@@ -534,23 +589,40 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: 14px;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
 }
 
 .passo-titolo {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 600;
-  margin: 0 0 8px;
-  color: var(--bianco);
+  margin: 0 0 6px;
+  color: #f5f0e8;
+}
+
+[data-tema="chiaro"] .passo-titolo {
+  color: #1a1208;
 }
 
 .passo-testo {
-  color: rgba(245,240,232,0.6);
-  font-size: 14px;
+  color: rgba(245,240,232,0.65);
+  font-size: 13px;
   margin: 0;
   line-height: 1.55;
 }
+
+[data-tema="chiaro"] .passo-testo {
+  color: #5c4020;
+}
+
+[data-tema="chiaro"] .passo-testo {
+  color: #5c4020;
+}
+
+[data-tema="chiaro"] .passi .titolo-sezione {
+  color: #1a1208;
+}
+
 
 /* ===================== FOOTER ===================== */
 .footer {
@@ -644,7 +716,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* Sidebar filtri */
-.filtro-sidebar { border: 1px solid var(--bordo) !important; }
+.filtro-sidebar { border: 1px solid var(--bordo); }
 .filtro-sidebar .form-label,
 .filtro-sidebar h2 { color: var(--oro); }
 .filtro-sidebar .form-check-label { color: var(--bianco); }
@@ -867,4 +939,221 @@ a { color: inherit; text-decoration: none; }
   .card-tall { aspect-ratio: 16 / 7; }
   .card-square { aspect-ratio: 16 / 9; }
   .avatar-grande { width: 70px; height: 70px; font-size: 1.2rem; }
+}
+
+/* ===== FIX: filter-sidebar (nome corretto usato negli HTML) ===== */
+.filter-sidebar {
+  background: var(--blu-medio);
+  border: 1px solid var(--bordo);
+}
+
+/* ===== campo-input usabile ovunque come form-control ===== */
+.campo-input {
+  width: 100%;
+  background: var(--blu-chiaro);
+  border: 1.5px solid var(--bordo);
+  border-radius: 8px;
+  color: var(--bianco);
+  font-size: 0.88rem;
+  font-family: 'DM Sans', sans-serif;
+  padding: 9px 12px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+}
+.campo-input:focus {
+  outline: none;
+  border-color: var(--oro);
+  box-shadow: 0 0 0 3px var(--oro-glow);
+}
+.campo-input::placeholder { color: var(--testo-muted); opacity: 0.8; }
+.campo-input option { background: var(--blu-medio); color: var(--bianco); }
+
+/* ===== avatar-list (usato nelle card tutor in corsi.html) ===== */
+.avatar-list {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--oro) 0%, #a07830 100%);
+  color: var(--blu);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.82rem;
+  flex-shrink: 0;
+}
+
+/* ===================== DASHBOARD TABLE STYLING ===================== */
+.table tbody {
+  background: var(--blu-chiaro);
+}
+
+/* Classi per eliminare stili inline nel dashboard */
+.dashboard-tabs-nav {
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.88rem;
+}
+
+.dashboard-tab-btn {
+  margin-top: 4px;
+}
+
+.tab-sezione-titolo {
+  color: var(--bianco);
+}
+
+.tab-sezione-oro {
+  color: var(--oro);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.table-wrapper {
+  border: 1px solid var(--bordo);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.table-styled {
+  color: var(--bianco);
+}
+
+.table-styled thead {
+  background: var(--blu-chiaro);
+}
+
+.table-styled th {
+  color: var(--oro);
+  border-color: var(--bordo);
+  font-weight: 600;
+}
+
+.table-styled td {
+  border-color: var(--bordo);
+}
+
+.table-styled .td-muted {
+  color: var(--testo-muted);
+}
+
+.scheda-corso-inline {
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 12px;
+}
+
+.scheda-corso-inline-sm {
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.btn-annulla {
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+.btn-annulla:hover {
+  background: rgba(231,76,60,0.1);
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.btn-annulla-sm {
+  padding: 5px 12px;
+  font-size: 0.82rem;
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+.btn-annulla-sm:hover {
+  background: rgba(231,76,60,0.1);
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.testo-bianco { color: var(--bianco); }
+.testo-muted-inline { color: var(--testo-muted); }
+.testo-oro { color: var(--oro); }
+
+.stato-consegnato {
+  color: #2ecc71;
+  border-color: #2ecc71;
+  background: rgba(46,204,113,0.1);
+}
+
+.form-profilo-bg {
+  background: var(--blu-medio);
+  border: 1px solid var(--bordo);
+}
+
+.input-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.hr-bordo {
+  border-color: var(--bordo);
+}
+
+.sidebar-user-border {
+  border-bottom: 1px solid var(--bordo);
+}
+
+/* Classi per eliminare stili inline in corsi.html e strumenti.html */
+.btn-cerca {
+  border-radius: 0 8px 8px 0;
+}
+
+.select-sort {
+  width: auto;
+}
+
+.filtro-titolo {
+  color: var(--oro);
+}
+
+.filtro-label {
+  color: var(--oro);
+}
+
+.check-label {
+  color: var(--bianco);
+}
+
+.scheda-corso-list {
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.btn-scheda-inline {
+  display: inline-block;
+  width: auto;
+  padding: 6px 14px;
+}
+
+.campo-input-left {
+  border-radius: 8px 0 0 8px;
+  flex: 1;
+}
+
+/* Dashboard pill tab active */
+.pill-tab-active {
+  background: var(--oro);
+  color: var(--blu);
+}
+
+.pill-tab-inactive {
+  background: transparent;
+  color: var(--oro);
+}
+
+/* Strumenti: badge usato/nuovo */
+.testo-ruolo-small { font-size: 0.8rem; }
+
+.badge-stato {
+  font-size: 0.75rem;
 }
