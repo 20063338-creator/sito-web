@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mario Rossi — Profilo · MusicHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-box">
+      <a class="brand" href="index.html">🎵 MusicHub</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="strumenti.html">Strumenti</a></li>
+          <li><a href="corsi.html">Lezioni</a></li>
+        </ul>
+        <div class="nav-azioni">
+          <button id="tema">🌙</button>
+          <span>Ciao, <strong>Mario</strong></span>
+          <a href="login.html">Esci</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-2">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb-custom">
+        <li class="breadcrumb-item-custom"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item-custom"><a href="dashboard.html">Dashboard</a></li>
+        <li class="breadcrumb-item-custom attivo">Il mio profilo</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="container py-4">
+    <div class="row g-4">
+
+      <main class="col-lg-8">
+
+        <!-- Intestazione profilo -->
+        <div class="profilo-intestazione">
+          <div class="avatar-lg flex-shrink-0">MR</div>
+          <div class="profilo-info">
+            <h1 class="profilo-nome">Mario Rossi</h1>
+            <p class="profilo-ruolo">Cliente · Iscritto da gennaio 2026</p>
+            <div class="profilo-badge-lista">
+              <span class="ins-voto">🎸 Chitarra</span>
+              <span class="ins-voto">🎹 Pianoforte</span>
+            </div>
+            <div class="profilo-meta">
+              <span>3 strumenti acquistati</span>
+              <span>7 lezioni completate</span>
+              <span>2 tutor seguiti</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dati personali -->
+        <section class="profilo-sezione">
+          <h2 class="sezione-titolo">Dati personali</h2>
+          <div class="rounded-3 p-4 form-profilo-bg">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="mb-3">
+                  <label for="profilo-nome" class="campo-label">Nome</label>
+                  <input type="text" id="profilo-nome" class="campo-input" value="Mario">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="mb-3">
+                  <label for="profilo-cognome" class="campo-label">Cognome</label>
+                  <input type="text" id="profilo-cognome" class="campo-input" value="Rossi">
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="profilo-email" class="campo-label">Email</label>
+              <input type="email" id="profilo-email" class="campo-input" value="mario.rossi@email.it">
+            </div>
+            <div class="mb-3">
+              <label for="profilo-citta" class="campo-label">Città</label>
+              <input type="text" id="profilo-citta" class="campo-input" placeholder="es. Milano">
+            </div>
+            <div class="mb-4">
+              <label class="campo-label">Tipo di account</label>
+              <input type="text" class="campo-input input-disabled" value="Cliente" disabled>
+            </div>
+            <button class="btn-primary">Salva modifiche</button>
+          </div>
+        </section>
+
+        <!-- Cambia password -->
+        <section class="profilo-sezione">
+          <h2 class="sezione-titolo">Cambia password</h2>
+          <div class="rounded-3 p-4 form-profilo-bg">
+            <div class="mb-3">
+              <label for="profilo-vecchia-pw" class="campo-label">Password attuale</label>
+              <input type="password" id="profilo-vecchia-pw" class="campo-input" placeholder="••••••••">
+            </div>
+            <div class="mb-3">
+              <label for="profilo-nuova-pw" class="campo-label">Nuova password</label>
+              <input type="password" id="profilo-nuova-pw" class="campo-input" placeholder="Almeno 8 caratteri">
+              <div class="barra-forza-contenitore mt-2">
+                <div class="barra-forza-riempimento forza-0" id="barra-forza"></div>
+              </div>
+              <p class="testo-forza-password" id="testo-forza"></p>
+            </div>
+            <div class="mb-4">
+              <label for="profilo-conferma-pw" class="campo-label">Conferma nuova password</label>
+              <input type="password" id="profilo-conferma-pw" class="campo-input" placeholder="Ripeti la nuova password">
+            </div>
+            <button class="btn-primary">Aggiorna password</button>
+          </div>
+        </section>
+
+        <!-- Strumenti di interesse -->
+        <section class="profilo-sezione">
+          <h2 class="sezione-titolo">Strumenti di interesse</h2>
+          <p class="profilo-testo">Seleziona gli strumenti che ti interessano per ricevere suggerimenti personalizzati.</p>
+          <div class="d-flex flex-wrap gap-2 mb-3">
+            <label class="interesse-chip"><input type="checkbox" checked hidden> 🎸 Chitarra</label>
+            <label class="interesse-chip"><input type="checkbox" checked hidden> 🎹 Pianoforte</label>
+            <label class="interesse-chip"><input type="checkbox" hidden> 🥁 Batteria</label>
+            <label class="interesse-chip"><input type="checkbox" hidden> 🎻 Violino</label>
+            <label class="interesse-chip"><input type="checkbox" hidden> 🎺 Tromba</label>
+            <label class="interesse-chip"><input type="checkbox" hidden> 🎵 Canto</label>
+          </div>
+          <button class="btn-primary">Salva preferenze</button>
+        </section>
+
+        <!-- Zona pericolosa -->
+        <section class="profilo-sezione">
+          <h2 class="sezione-titolo sezione-titolo-danger">Zona pericolosa</h2>
+          <div class="zona-pericolo-bg">
+            <p class="small testo-muted-inline mb-3">Eliminando l'account perderai tutti i tuoi dati, acquisti e prenotazioni. Questa azione è irreversibile.</p>
+            <button class="btn-danger-outline">Elimina account</button>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-lg-4">
+
+        <!-- Riepilogo attività -->
+        <div class="sidebar-prenotazione mb-4">
+          <h2 class="sidebar-titolo">La tua attività</h2>
+          <p class="sidebar-sottotitolo">Riepilogo del tuo profilo su MusicHub</p>
+          <dl class="attivita-lista">
+            <div class="attivita-riga">
+              <dt class="attivita-label">Strumenti acquistati</dt>
+              <dd class="attivita-valore">3</dd>
+            </div>
+            <div class="attivita-riga">
+              <dt class="attivita-label">Lezioni prenotate</dt>
+              <dd class="attivita-valore">7</dd>
+            </div>
+            <div class="attivita-riga">
+              <dt class="attivita-label">Lezioni completate</dt>
+              <dd class="attivita-valore">5</dd>
+            </div>
+            <div class="attivita-riga">
+              <dt class="attivita-label">Tutor seguiti</dt>
+              <dd class="attivita-valore">2</dd>
+            </div>
+            <div class="attivita-riga">
+              <dt class="attivita-label">Membro dal</dt>
+              <dd class="attivita-valore">Gen 2026</dd>
+            </div>
+          </dl>
+          <hr class="hr-bordo">
+          <a href="dashboard.html" class="btn-primary auth-btn-full">Vai alla dashboard</a>
+        </div>
+
+        <!-- Prossima lezione -->
+        <div class="sidebar-prenotazione">
+          <h2 class="sidebar-titolo">Prossima lezione</h2>
+          <p class="sidebar-sottotitolo">La tua prossima sessione prenotata</p>
+          <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="avatar flex-shrink-0">MR</div>
+            <div>
+              <p class="fw-semibold small mb-0 testo-bianco">Chitarra per principianti</p>
+              <p class="small mb-0 testo-muted-inline">con Marco Rossi</p>
+            </div>
+          </div>
+          <p class="avviso-login">📅 Lunedì 19 maggio 2026 · ore 10:00 · 60 min</p>
+          <a href="corsi.html" class="btn-outline auth-btn-full text-center">Prenota un'altra lezione</a>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-box">
+        <a class="brand" href="index.html">🎵 MusicHub</a>
+        <small class="footer-copy">© 2026 — Università</small>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="strumenti.html">Strumenti</a>
+          <a href="corsi.html">Lezioni</a>
+          <a href="login.html">Accedi</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btn  = document.getElementById('tema');
+    const html = document.documentElement;
+    if (localStorage.getItem('tema') === 'chiaro') {
+      html.setAttribute('data-tema', 'chiaro');
+      btn.textContent = '☀️';
+    }
+    btn.addEventListener('click', () => {
+      const t = html.getAttribute('data-tema');
+      if (t === 'chiaro') {
+        html.removeAttribute('data-tema');
+        btn.textContent = '🌙';
+        localStorage.setItem('tema', 'scuro');
+      } else {
+        html.setAttribute('data-tema', 'chiaro');
+        btn.textContent = '☀️';
+        localStorage.setItem('tema', 'chiaro');
+      }
+    });
+
+    document.getElementById('profilo-nuova-pw').addEventListener('input', function () {
+      const v = this.value;
+      const barra = document.getElementById('barra-forza');
+      const testo = document.getElementById('testo-forza');
+      let forza = 0;
+      if (v.length >= 8) forza++;
+      if (/[A-Z]/.test(v)) forza++;
+      if (/[0-9]/.test(v)) forza++;
+      if (/[^A-Za-z0-9]/.test(v)) forza++;
+      barra.className = 'barra-forza-riempimento forza-' + forza;
+      const etichette = ['', 'Debole', 'Discreta', 'Buona', 'Ottima'];
+      testo.textContent = v.length ? etichette[forza] : '';
+    });
+  </script>
+</body>
+</html>

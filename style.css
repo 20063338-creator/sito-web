@@ -27,6 +27,11 @@
   --bordo:      rgba(139,105,20,0.25);
 }
 
+[data-tema="chiaro"] .campo-input {
+  background: #f9f0d9;
+  color: #1a1208;
+}
+
 /* ===================== RESET ===================== */
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -336,7 +341,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 [data-tema="chiaro"] .insegnanti {
-  background: #f5edd8;
+  background: #ddd0b0;
 }
 
 .intestazione {
@@ -489,8 +494,9 @@ a { color: inherit; text-decoration: none; }
   background: #1e2f5c;
 }
 
-[data-tema="chiaro"] .card-ins .scheda-footer {
-  background: #ede0c4;
+[data-tema="chiaro"] .card-ins .scheda-footer,
+[data-tema="chiaro"] .card-ins-corpo {
+  background: #f5edd8;
 }
 
 .card-ins-corpo {
@@ -500,10 +506,6 @@ a { color: inherit; text-decoration: none; }
   padding: 20px 20px 12px;
   background: #1e2f5c;
   flex: 1;
-}
-
-[data-tema="chiaro"] .card-ins-corpo {
-  background: #ddd0b0;
 }
 
 .ins-info { min-width: 0; }
@@ -544,8 +546,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 [data-tema="chiaro"] .passi {
-  background: #ddd0b0;
-  border-color: rgba(139,105,20,0.25);
+  background: #f5edd8;
 }
 
 .passi .titolo-sezione {
@@ -569,8 +570,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 [data-tema="chiaro"] .passo {
-  background: linear-gradient(135deg, #ddd0b0 0%, rgba(139,105,20,0.08) 100%);
-  border: 1.5px solid rgba(139,105,20,0.3);
+  background: #ddd0b0;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
@@ -769,6 +769,12 @@ a { color: inherit; text-decoration: none; }
 .nascosto { display: none; }
 
 /* ===================== AUTH ===================== */
+
+.auth-tab.active {
+  color: var(--oro);
+  border-bottom-color: var(--oro);
+}
+
 .auth-main { padding: 60px 0; }
 
 .auth-card {
@@ -819,6 +825,10 @@ a { color: inherit; text-decoration: none; }
 
 .auth-tab-content { padding-top: 1.5rem; }
 
+.tab-pane:not(.show) {
+  display: none;
+}
+
 .campo-gruppo { margin-bottom: 1rem; }
 
 .campo-label {
@@ -850,9 +860,10 @@ a { color: inherit; text-decoration: none; }
 .auth-check-gruppo { display: flex; align-items: center; gap: 8px; }
 .auth-check-label { font-size: 0.84rem; color: var(--testo-muted); cursor: pointer; }
 .auth-riga-check { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem; }
-.auth-termini { margin-bottom: 1.2rem; align-items: flex-start; }
+.auth-termini { margin-top: 1.5rem; margin-bottom: 1.2rem; align-items: flex-start; }
 
 .auth-radio-lista { display: flex; flex-direction: column; gap: 8px; }
+.campo-gruppo:has(.auth-radio-lista) { margin-bottom: 1rem; }
 .auth-radio-card {
   display: flex;
   align-items: flex-start;
@@ -1156,4 +1167,116 @@ a { color: inherit; text-decoration: none; }
 
 .badge-stato {
   font-size: 0.75rem;
+}
+
+/* ===================== UTENTE — PAGINA PROFILO ===================== */
+
+/* Avatar grande profilo utente */
+.avatar-lg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--oro) 0%, #a07830 100%);
+  color: var(--blu);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+/* Chip strumenti di interesse */
+.interesse-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1.5px solid var(--bordo);
+  background: var(--blu-chiaro);
+  color: var(--testo-muted);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  user-select: none;
+}
+.interesse-chip:hover {
+  border-color: var(--oro);
+  color: var(--oro);
+  background: var(--oro-glow);
+}
+/* Stato attivo gestito da :has(input:checked) — niente JS */
+.interesse-chip:has(input:checked) {
+  border-color: var(--oro);
+  background: var(--oro-glow);
+  color: var(--oro);
+  font-weight: 600;
+}
+
+/* Riepilogo attività — dl/dt/dd semantici */
+.attivita-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 1rem;
+}
+.attivita-riga {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--bordo);
+  margin: 0;
+}
+.attivita-riga:last-child { border-bottom: none; }
+.attivita-label { color: var(--testo-muted); }
+.attivita-valore { font-weight: 700; color: var(--oro); }
+
+/* Zona pericolosa */
+.sezione-titolo-danger { color: #e74c3c; }
+.zona-pericolo-bg {
+  background: rgba(231, 76, 60, 0.05);
+  border: 1px solid rgba(231, 76, 60, 0.25);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.btn-danger-outline {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1.5px solid #e74c3c;
+  color: #e74c3c;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+.btn-danger-outline:hover { background: rgba(231, 76, 60, 0.12); }
+
+/* Barra forza password (condivisa con login.html) */
+.barra-forza-contenitore {
+  height: 4px;
+  background: var(--blu-chiaro);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.barra-forza-riempimento {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s, background 0.3s;
+}
+.forza-0 { width: 0; }
+.forza-1 { width: 25%; background: #e74c3c; }
+.forza-2 { width: 50%; background: #e67e22; }
+.forza-3 { width: 75%; background: #f1c40f; }
+.forza-4 { width: 100%; background: #2ecc71; }
+.testo-forza-password {
+  font-size: 0.78rem;
+  color: var(--testo-muted);
+  margin: 4px 0 0;
+  min-height: 16px;
 }

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordine confermato — MusicHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-box">
+      <a class="brand" href="index.html">🎵 MusicHub</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="strumenti.html">Strumenti</a></li>
+          <li><a href="corsi.html">Lezioni</a></li>
+        </ul>
+        <div class="nav-azioni">
+          <button id="tema">🌙</button>
+          <span>Ciao, <strong>Mario</strong></span>
+          <a href="login.html">Esci</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Step indicator -->
+  <div class="container py-3">
+    <ol class="checkout-steps">
+      <li class="checkout-step step-fatto">Carrello</li>
+      <li class="checkout-step step-fatto">Pagamento</li>
+      <li class="checkout-step step-attivo">Conferma</li>
+    </ol>
+  </div>
+
+  <main class="container py-4 pb-5">
+
+    <!-- Conferma hero -->
+    <div class="conferma-hero">
+      <div class="conferma-icona">✅</div>
+      <h1 class="conferma-titolo">Ordine confermato!</h1>
+      <p class="conferma-sottotitolo">Grazie Mario, il tuo ordine è stato ricevuto correttamente.</p>
+      <p class="testo-muted-inline small">Numero ordine: <strong class="testo-oro">#MH-2026-00847</strong></p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-8">
+
+        <!-- Riepilogo ordine -->
+        <section class="profilo-sezione">
+          <h2 class="sezione-titolo">Riepilogo ordine</h2>
+          <div class="table-wrapper">
+            <div class="table-responsive">
+              <table class="table mb-0 small table-styled">
+                <thead>
+                  <tr>
+                    <th>Strumento</th>
+                    <th>Venditore</th>
+                    <th class="text-end">Importo</th>
+                    <th>Stato</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Fender CD-60S</td>
+                    <td class="td-muted">Luigi V.</td>
+                    <td class="text-end">€ 220,00</td>
+                    <td><span class="ins-voto">In preparazione</span></td>
+                  </tr>
+                  <tr>
+                    <td>Yamaha PSR-E363</td>
+                    <td class="td-muted">MusicHub Store</td>
+                    <td class="text-end">€ 180,00</td>
+                    <td><span class="ins-voto">In preparazione</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dettagli spedizione -->
+        <section class="profilo-sezione">
+          <h2 class="sezione-titolo">Spedizione</h2>
+          <div class="rounded-3 p-4 form-profilo-bg">
+            <dl class="attivita-lista">
+              <div class="attivita-riga">
+                <dt class="attivita-label">Destinatario</dt>
+                <dd class="attivita-valore">Mario Rossi</dd>
+              </div>
+              <div class="attivita-riga">
+                <dt class="attivita-label">Indirizzo</dt>
+                <dd class="attivita-valore">Via Roma 12, 20100 Milano (MI)</dd>
+              </div>
+              <div class="attivita-riga">
+                <dt class="attivita-label">Metodo</dt>
+                <dd class="attivita-valore">Spedizione standard — gratuita</dd>
+              </div>
+              <div class="attivita-riga">
+                <dt class="attivita-label">Consegna prevista</dt>
+                <dd class="attivita-valore">27 – 29 maggio 2026</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- Prossimi passi -->
+        <section class="profilo-sezione">
+          <h2 class="sezione-titolo">Cosa succede adesso?</h2>
+          <div class="passi-lista passi-lista-verticale">
+            <div class="passo passo-conferma">
+              <div class="passo-num">1</div>
+              <div>
+                <h3 class="passo-titolo">Email di conferma</h3>
+                <p class="passo-testo">Ti abbiamo inviato un'email a mario.rossi@email.it con il riepilogo dell'ordine.</p>
+              </div>
+            </div>
+            <div class="passo passo-conferma">
+              <div class="passo-num">2</div>
+              <div>
+                <h3 class="passo-titolo">Preparazione</h3>
+                <p class="passo-testo">Il venditore preparerà il pacco entro 1–2 giorni lavorativi.</p>
+              </div>
+            </div>
+            <div class="passo passo-conferma">
+              <div class="passo-num">3</div>
+              <div>
+                <h3 class="passo-titolo">Spedizione</h3>
+                <p class="passo-testo">Riceverai un'email con il codice di tracciamento non appena il pacco sarà affidato al corriere.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="d-flex flex-wrap gap-3">
+          <a href="dashboard.html" class="btn-primary">Vai alla dashboard</a>
+          <a href="strumenti.html" class="btn-outline">Continua lo shopping</a>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-box">
+        <a class="brand" href="index.html">🎵 MusicHub</a>
+        <small class="footer-copy">© 2026 — Università</small>
+        <nav class="footer-nav">
+          <a href="strumenti.html">Strumenti</a>
+          <a href="corsi.html">Lezioni</a>
+          <a href="login.html">Accedi</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btn  = document.getElementById('tema');
+    const html = document.documentElement;
+    if (localStorage.getItem('tema') === 'chiaro') {
+      html.setAttribute('data-tema', 'chiaro');
+      btn.textContent = '☀️';
+    }
+    btn.addEventListener('click', () => {
+      const t = html.getAttribute('data-tema');
+      if (t === 'chiaro') {
+        html.removeAttribute('data-tema');
+        btn.textContent = '🌙';
+        localStorage.setItem('tema', 'scuro');
+      } else {
+        html.setAttribute('data-tema', 'chiaro');
+        btn.textContent = '☀️';
+        localStorage.setItem('tema', 'chiaro');
+      }
+    });
+  </script>
+</body>
+</html>

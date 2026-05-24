@@ -23,7 +23,7 @@
         <div class="nav-azioni">
           <button id="tema">🌙</button>
           <a href="login.html">Accedi</a>
-          <a href="registrazione.html">Registrati</a>
+          <a href="login.html#registrati">Registrati</a>
         </div>
       </div>
     </div>
@@ -245,7 +245,12 @@
         localStorage.setItem('tema', 'chiaro');
       }
     });
-  </script>
 
+    if (window.location.hash === '#registrati') {
+      bootstrap.Tab.getOrCreateInstance(
+      document.getElementById('tab-registrati')
+     ).show();
+    }
+  </script>
 </body>
 </html>

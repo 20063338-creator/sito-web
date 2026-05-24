@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Insegnante — MusicHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-box">
+      <a class="brand" href="index.html">🎵 MusicHub</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="strumenti.html">Strumenti</a></li>
+          <li><a href="corsi.html">Lezioni</a></li>
+        </ul>
+        <div class="nav-azioni">
+          <button id="tema">🌙</button>
+          <span>Ciao, <strong>Marco</strong></span>
+          <a href="login.html">Esci</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <div class="row g-4">
+
+      <!-- Sidebar -->
+      <aside class="col-lg-3">
+        <div class="filter-sidebar rounded-3 p-3">
+          <div class="d-flex align-items-center gap-3 mb-3 pb-3 sidebar-user-border">
+            <div class="avatar flex-shrink-0">MR</div>
+            <div>
+              <p class="fw-semibold mb-0 small testo-bianco">Marco Rossi</p>
+              <p class="mb-0 testo-muted-inline testo-ruolo-small">Insegnante</p>
+            </div>
+          </div>
+          <nav>
+            <div class="nav flex-column gap-1" id="dashboard-tabs" role="tablist">
+              <button class="btn-scheda text-start nav-link active dashboard-tabs-nav pill-tab-active"
+                data-bs-toggle="pill" data-bs-target="#tab-panoramica" role="tab">📊 Panoramica</button>
+              <button class="btn-scheda text-start nav-link dashboard-tabs-nav dashboard-tab-btn pill-tab-inactive"
+                data-bs-toggle="pill" data-bs-target="#tab-prenotazioni" role="tab">📅 Prenotazioni</button>
+              <button class="btn-scheda text-start nav-link dashboard-tabs-nav dashboard-tab-btn pill-tab-inactive"
+                data-bs-toggle="pill" data-bs-target="#tab-corsi" role="tab">🎸 I miei corsi</button>
+              <button class="btn-scheda text-start nav-link dashboard-tabs-nav dashboard-tab-btn pill-tab-inactive"
+                data-bs-toggle="pill" data-bs-target="#tab-guadagni" role="tab">💰 Guadagni</button>
+              <button class="btn-scheda text-start nav-link dashboard-tabs-nav dashboard-tab-btn pill-tab-inactive"
+                data-bs-toggle="pill" data-bs-target="#tab-profilo" role="tab">👤 Il mio profilo</button>
+            </div>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Contenuto principale -->
+      <main class="col-lg-9">
+        <div class="tab-content">
+
+          <!-- Panoramica -->
+          <div class="tab-pane fade show active" id="tab-panoramica" role="tabpanel">
+            <h1 class="h4 fw-bold mb-4 testo-bianco">Buongiorno, Marco 👋</h1>
+
+            <div class="row g-3 mb-4">
+              <div class="col-sm-3">
+                <div class="stat-card">
+                  <p class="stat-valore">12</p>
+                  <p class="stat-etichetta">Lezioni questo mese</p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="stat-card">
+                  <p class="stat-valore">8</p>
+                  <p class="stat-etichetta">Studenti attivi</p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="stat-card">
+                  <p class="stat-valore testo-oro">€ 360</p>
+                  <p class="stat-etichetta">Guadagno mensile</p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="stat-card">
+                  <p class="stat-valore">4.8 ⭐</p>
+                  <p class="stat-etichetta">Valutazione media</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h2 class="sezione-titolo">Prossime lezioni</h2>
+              <div class="d-flex flex-column gap-2 mt-3">
+                <div class="scheda-corso scheda-corso-inline-sm d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="avatar flex-shrink-0">MR</div>
+                    <div>
+                      <p class="fw-semibold small mb-0 testo-bianco">Chitarra per principianti</p>
+                      <p class="small mb-0 testo-muted-inline">Mario Rossi · Lun 19 mag · ore 10:00</p>
+                    </div>
+                  </div>
+                  <span class="ins-voto">60 min</span>
+                </div>
+                <div class="scheda-corso scheda-corso-inline-sm d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="avatar flex-shrink-0">GF</div>
+                    <div>
+                      <p class="fw-semibold small mb-0 testo-bianco">Chitarra intermedia</p>
+                      <p class="small mb-0 testo-muted-inline">Giulia F. · Lun 19 mag · ore 14:00</p>
+                    </div>
+                  </div>
+                  <span class="ins-voto">60 min</span>
+                </div>
+                <div class="scheda-corso scheda-corso-inline-sm d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <div class="d-flex align-items-center gap-3">
+                    <div class="avatar flex-shrink-0">LP</div>
+                    <div>
+                      <p class="fw-semibold small mb-0 testo-bianco">Teoria musicale</p>
+                      <p class="small mb-0 testo-muted-inline">Luca P. · Mar 20 mag · ore 11:00</p>
+                    </div>
+                  </div>
+                  <span class="ins-voto">45 min</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="sezione-titolo">Ultime recensioni</h2>
+              <div class="recensioni-lista mt-3">
+                <div class="scheda-recensione">
+                  <div class="recensione-header">
+                    <span class="recensione-autore">Giulia M.</span>
+                    <span class="ins-voto">⭐ 5/5</span>
+                  </div>
+                  <p class="recensione-testo">Marco è un insegnante fantastico. In pochi mesi sono riuscita a suonare i miei brani preferiti.</p>
+                </div>
+                <div class="scheda-recensione">
+                  <div class="recensione-header">
+                    <span class="recensione-autore">Luca P.</span>
+                    <span class="ins-voto">⭐ 4/5</span>
+                  </div>
+                  <p class="recensione-testo">Buon metodo, lezioni ben strutturate. A volte si va un po' veloci ma basta dirlo e adatta il ritmo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prenotazioni -->
+          <div class="tab-pane fade" id="tab-prenotazioni" role="tabpanel">
+            <h1 class="h4 fw-bold mb-4 testo-bianco">Prenotazioni</h1>
+
+            <p class="tab-sezione-oro mb-2">In arrivo</p>
+            <div class="d-flex flex-column gap-2 mb-4">
+              <div class="scheda-corso scheda-corso-inline-sm d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <div>
+                  <p class="fw-semibold small mb-0 testo-bianco">Chitarra per principianti — Mario Rossi</p>
+                  <p class="small mb-0 testo-muted-inline">Lun 19 maggio 2026 · ore 10:00 · 60 min</p>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn-scheda btn-scheda-inline">Accetta</button>
+                  <button class="btn-annulla-sm btn-outline">Rifiuta</button>
+                </div>
+              </div>
+              <div class="scheda-corso scheda-corso-inline-sm d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <div>
+                  <p class="fw-semibold small mb-0 testo-bianco">Pianoforte per adulti — Anna B.</p>
+                  <p class="small mb-0 testo-muted-inline">Mer 21 maggio 2026 · ore 16:00 · 60 min</p>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn-scheda btn-scheda-inline">Accetta</button>
+                  <button class="btn-annulla-sm btn-outline">Rifiuta</button>
+                </div>
+              </div>
+            </div>
+
+            <p class="tab-sezione-oro mb-2">Storico</p>
+            <div class="table-wrapper">
+              <div class="table-responsive">
+                <table class="table mb-0 small table-styled">
+                  <thead>
+                    <tr>
+                      <th>Corso</th>
+                      <th>Studente</th>
+                      <th>Data</th>
+                      <th>Durata</th>
+                      <th class="text-end">Guadagno</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Chitarra per principianti</td>
+                      <td class="td-muted">Mario Rossi</td>
+                      <td class="td-muted">05/05/2026</td>
+                      <td class="td-muted">60 min</td>
+                      <td class="text-end testo-oro">€ 30,00</td>
+                    </tr>
+                    <tr>
+                      <td>Chitarra per principianti</td>
+                      <td class="td-muted">Mario Rossi</td>
+                      <td class="td-muted">28/04/2026</td>
+                      <td class="td-muted">60 min</td>
+                      <td class="text-end testo-oro">€ 30,00</td>
+                    </tr>
+                    <tr>
+                      <td>Teoria musicale</td>
+                      <td class="td-muted">Luca P.</td>
+                      <td class="td-muted">10/04/2026</td>
+                      <td class="td-muted">45 min</td>
+                      <td class="text-end testo-oro">€ 25,00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Corsi -->
+          <div class="tab-pane fade" id="tab-corsi" role="tabpanel">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h1 class="h4 fw-bold testo-bianco mb-0">I miei corsi</h1>
+              <button class="btn-primary">+ Nuovo corso</button>
+            </div>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="scheda-corso">
+                  <h3 class="scheda-corso-titolo">Chitarra per principianti</h3>
+                  <p class="scheda-corso-desc">Parti da zero e impara le basi: accordi aperti, ritmo e le prime canzoni.</p>
+                  <div class="scheda-corso-footer">
+                    <span class="scheda-corso-meta">60 min · Principiante</span>
+                    <span class="scheda-corso-prezzo">€ 30</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="scheda-corso">
+                  <h3 class="scheda-corso-titolo">Chitarra intermedia</h3>
+                  <p class="scheda-corso-desc">Barre, scale pentatoniche, improvvisazione base e analisi di brani.</p>
+                  <div class="scheda-corso-footer">
+                    <span class="scheda-corso-meta">60 min · Intermedio</span>
+                    <span class="scheda-corso-prezzo">€ 35</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="scheda-corso">
+                  <h3 class="scheda-corso-titolo">Pianoforte per adulti</h3>
+                  <p class="scheda-corso-desc">Lezione pensata per adulti che iniziano da zero, con brani moderni e classici.</p>
+                  <div class="scheda-corso-footer">
+                    <span class="scheda-corso-meta">60 min · Principiante</span>
+                    <span class="scheda-corso-prezzo">€ 30</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="scheda-corso">
+                  <h3 class="scheda-corso-titolo">Teoria musicale</h3>
+                  <p class="scheda-corso-desc">Solfeggio, scale, intervalli e armonia di base applicata agli strumenti.</p>
+                  <div class="scheda-corso-footer">
+                    <span class="scheda-corso-meta">45 min · Tutti i livelli</span>
+                    <span class="scheda-corso-prezzo">€ 25</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Guadagni -->
+          <div class="tab-pane fade" id="tab-guadagni" role="tabpanel">
+            <h1 class="h4 fw-bold mb-4 testo-bianco">Guadagni</h1>
+
+            <div class="row g-3 mb-4">
+              <div class="col-sm-4">
+                <div class="stat-card">
+                  <p class="stat-valore testo-oro">€ 360</p>
+                  <p class="stat-etichetta">Questo mese</p>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="stat-card">
+                  <p class="stat-valore testo-oro">€ 1.240</p>
+                  <p class="stat-etichetta">Ultimi 6 mesi</p>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="stat-card">
+                  <p class="stat-valore testo-oro">€ 85</p>
+                  <p class="stat-etichetta">In attesa di pagamento</p>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="sezione-titolo mb-3">Transazioni recenti</h2>
+            <div class="table-wrapper">
+              <div class="table-responsive">
+                <table class="table mb-0 small table-styled">
+                  <thead>
+                    <tr>
+                      <th>Corso</th>
+                      <th>Studente</th>
+                      <th>Data</th>
+                      <th class="text-end">Importo</th>
+                      <th>Stato</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Chitarra per principianti</td>
+                      <td class="td-muted">Mario Rossi</td>
+                      <td class="td-muted">05/05/2026</td>
+                      <td class="text-end testo-oro">€ 30,00</td>
+                      <td><span class="ins-voto stato-consegnato">Pagato</span></td>
+                    </tr>
+                    <tr>
+                      <td>Chitarra per principianti</td>
+                      <td class="td-muted">Mario Rossi</td>
+                      <td class="td-muted">28/04/2026</td>
+                      <td class="text-end testo-oro">€ 30,00</td>
+                      <td><span class="ins-voto stato-consegnato">Pagato</span></td>
+                    </tr>
+                    <tr>
+                      <td>Chitarra intermedia</td>
+                      <td class="td-muted">Giulia F.</td>
+                      <td class="td-muted">22/04/2026</td>
+                      <td class="text-end testo-oro">€ 35,00</td>
+                      <td><span class="ins-voto stato-consegnato">Pagato</span></td>
+                    </tr>
+                    <tr>
+                      <td>Teoria musicale</td>
+                      <td class="td-muted">Luca P.</td>
+                      <td class="td-muted">19/05/2026</td>
+                      <td class="text-end testo-oro">€ 25,00</td>
+                      <td><span class="ins-voto">In attesa</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profilo -->
+          <div class="tab-pane fade" id="tab-profilo" role="tabpanel">
+            <h1 class="h4 fw-bold mb-4 testo-bianco">Il mio profilo</h1>
+            <div class="rounded-3 p-4 form-profilo-bg">
+              <div class="mb-3">
+                <label for="profilo-nome" class="campo-label">Nome</label>
+                <input type="text" id="profilo-nome" class="campo-input" value="Marco">
+              </div>
+              <div class="mb-3">
+                <label for="profilo-cognome" class="campo-label">Cognome</label>
+                <input type="text" id="profilo-cognome" class="campo-input" value="Rossi">
+              </div>
+              <div class="mb-3">
+                <label for="profilo-email" class="campo-label">Email</label>
+                <input type="email" id="profilo-email" class="campo-input" value="marco.rossi@email.it">
+              </div>
+              <div class="mb-3">
+                <label for="profilo-bio" class="campo-label">Presentazione</label>
+                <textarea id="profilo-bio" class="campo-input" rows="4">Sono un chitarrista con oltre 10 anni di esperienza nell'insegnamento, sia a bambini che ad adulti.</textarea>
+              </div>
+              <div class="mb-3">
+                <label for="profilo-strumenti" class="campo-label">Strumenti insegnati</label>
+                <input type="text" id="profilo-strumenti" class="campo-input" value="Chitarra, Pianoforte">
+              </div>
+              <div class="mb-3">
+                <label class="campo-label">Tipo di account</label>
+                <input type="text" class="campo-input input-disabled" value="Insegnante" disabled>
+              </div>
+              <hr class="hr-bordo">
+              <p class="small fw-semibold mb-2 testo-bianco">Cambia password</p>
+              <div class="mb-3">
+                <label for="profilo-vecchia-pw" class="campo-label">Password attuale</label>
+                <input type="password" id="profilo-vecchia-pw" class="campo-input" placeholder="••••••••">
+              </div>
+              <div class="mb-4">
+                <label for="profilo-nuova-pw" class="campo-label">Nuova password</label>
+                <input type="password" id="profilo-nuova-pw" class="campo-input" placeholder="Almeno 8 caratteri">
+              </div>
+              <button class="btn-primary">Salva modifiche</button>
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-box">
+        <a class="brand" href="index.html">🎵 MusicHub</a>
+        <small class="footer-copy">© 2026 — Università</small>
+        <nav class="footer-nav">
+          <a href="strumenti.html">Strumenti</a>
+          <a href="corsi.html">Lezioni</a>
+          <a href="login.html">Accedi</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btn  = document.getElementById('tema');
+    const html = document.documentElement;
+    if (localStorage.getItem('tema') === 'chiaro') {
+      html.setAttribute('data-tema', 'chiaro');
+      btn.textContent = '☀️';
+    }
+    btn.addEventListener('click', () => {
+      const t = html.getAttribute('data-tema');
+      if (t === 'chiaro') {
+        html.removeAttribute('data-tema');
+        btn.textContent = '🌙';
+        localStorage.setItem('tema', 'scuro');
+      } else {
+        html.setAttribute('data-tema', 'chiaro');
+        btn.textContent = '☀️';
+        localStorage.setItem('tema', 'chiaro');
+      }
+    });
+
+    document.querySelectorAll('[data-bs-toggle="pill"]').forEach(function (tabBtn) {
+      tabBtn.addEventListener('shown.bs.tab', function () {
+        document.querySelectorAll('[data-bs-toggle="pill"]').forEach(function (b) {
+          b.classList.remove('pill-tab-active');
+          b.classList.add('pill-tab-inactive');
+        });
+        tabBtn.classList.remove('pill-tab-inactive');
+        tabBtn.classList.add('pill-tab-active');
+      });
+    });
+  </script>
+</body>
+</html>

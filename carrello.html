@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrello — MusicHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-box">
+      <a class="brand" href="index.html">🎵 MusicHub</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="strumenti.html">Strumenti</a></li>
+          <li><a href="corsi.html">Lezioni</a></li>
+        </ul>
+        <div class="nav-azioni">
+          <button id="tema">🌙</button>
+          <a href="login.html">Accedi</a>
+          <a href="login.html#registrati">Registrati</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-2">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb-custom">
+        <li class="breadcrumb-item-custom"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item-custom"><a href="strumenti.html">Strumenti</a></li>
+        <li class="breadcrumb-item-custom attivo">Carrello</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="container py-4">
+    <h1 class="h3 fw-bold testo-bianco mb-4">Il tuo carrello</h1>
+
+    <div class="row g-4">
+
+      <main class="col-lg-8">
+        <div class="d-flex flex-column gap-3">
+
+          <article class="carrello-item">
+            <div class="carrello-emoji">🎸</div>
+            <div class="carrello-info">
+              <p class="categoria mb-0">Chitarre acustiche</p>
+              <h2 class="nome mb-1">Fender CD-60S</h2>
+              <p class="testo-muted-inline small mb-0">Venditore: Luigi V. · Usato</p>
+            </div>
+            <div class="carrello-azioni">
+              <p class="prezzo mb-2">€ 220,00</p>
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <label for="qty-1" class="visually-hidden">Quantità</label>
+                <select id="qty-1" class="campo-input select-qty">
+                  <option value="1" selected>1</option>
+                </select>
+              </div>
+              <button class="btn-rimuovi">Rimuovi</button>
+            </div>
+          </article>
+
+          <article class="carrello-item">
+            <div class="carrello-emoji">🎹</div>
+            <div class="carrello-info">
+              <p class="categoria mb-0">Tastiere</p>
+              <h2 class="nome mb-1">Yamaha PSR-E363</h2>
+              <p class="testo-muted-inline small mb-0">Venditore: MusicHub Store · Nuovo</p>
+            </div>
+            <div class="carrello-azioni">
+              <p class="prezzo mb-2">€ 180,00</p>
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <label for="qty-2" class="visually-hidden">Quantità</label>
+                <select id="qty-2" class="campo-input select-qty">
+                  <option value="1" selected>1</option>
+                </select>
+              </div>
+              <button class="btn-rimuovi">Rimuovi</button>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="mt-4">
+          <a href="strumenti.html" class="btn-outline">← Continua lo shopping</a>
+        </div>
+      </main>
+
+      <aside class="col-lg-4">
+        <div class="sidebar-prenotazione">
+          <h2 class="sidebar-titolo">Riepilogo ordine</h2>
+
+          <dl class="attivita-lista mb-3">
+            <div class="attivita-riga">
+              <dt class="attivita-label">Fender CD-60S</dt>
+              <dd class="attivita-valore">€ 220,00</dd>
+            </div>
+            <div class="attivita-riga">
+              <dt class="attivita-label">Yamaha PSR-E363</dt>
+              <dd class="attivita-valore">€ 180,00</dd>
+            </div>
+            <div class="attivita-riga">
+              <dt class="attivita-label">Spedizione</dt>
+              <dd class="attivita-valore stato-consegnato">Gratuita</dd>
+            </div>
+          </dl>
+
+          <hr class="hr-bordo">
+
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <span class="fw-bold testo-bianco">Totale</span>
+            <span class="dettaglio-prezzo">€ 400,00</span>
+          </div>
+
+          <a href="checkout.html" class="btn-primary auth-btn-full">Procedi al pagamento</a>
+
+          <div class="avviso-login mt-3">
+            🔒 Pagamento sicuro e protetto da MusicHub
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-box">
+        <a class="brand" href="index.html">🎵 MusicHub</a>
+        <small class="footer-copy">© 2026 — Università</small>
+        <nav class="footer-nav">
+          <a href="strumenti.html">Strumenti</a>
+          <a href="corsi.html">Lezioni</a>
+          <a href="login.html">Accedi</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btn  = document.getElementById('tema');
+    const html = document.documentElement;
+    if (localStorage.getItem('tema') === 'chiaro') {
+      html.setAttribute('data-tema', 'chiaro');
+      btn.textContent = '☀️';
+    }
+    btn.addEventListener('click', () => {
+      const t = html.getAttribute('data-tema');
+      if (t === 'chiaro') {
+        html.removeAttribute('data-tema');
+        btn.textContent = '🌙';
+        localStorage.setItem('tema', 'scuro');
+      } else {
+        html.setAttribute('data-tema', 'chiaro');
+        btn.textContent = '☀️';
+        localStorage.setItem('tema', 'chiaro');
+      }
+    });
+
+    document.querySelectorAll('.btn-rimuovi').forEach(btn => {
+      btn.addEventListener('click', function () {
+        this.closest('.carrello-item').remove();
+      });
+    });
+  </script>
+</body>
+</html>

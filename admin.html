@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pannello Admin — MusicHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-box">
+      <a class="brand" href="index.html">🎵 MusicHub</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="strumenti.html">Strumenti</a></li>
+          <li><a href="corsi.html">Lezioni</a></li>
+        </ul>
+        <div class="nav-azioni">
+          <button id="tema">🌙</button>
+          <span class="ins-voto">🛡️ Admin</span>
+          <a href="login.html">Esci</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <div class="row g-4">
+
+      <!-- Sidebar -->
+      <aside class="col-lg-3">
+        <div class="filter-sidebar rounded-3 p-3">
+          <div class="d-flex align-items-center gap-3 mb-3 pb-3 sidebar-user-border">
+            <div class="avatar flex-shrink-0">AD</div>
+            <div>
+              <p class="fw-semibold mb-0 small testo-bianco">Admin</p>
+              <p class="mb-0 testo-muted-inline testo-ruolo-small">Pannello di controllo</p>
+            </div>
+          </div>
+          <nav>
+            <div class="nav flex-column gap-1" id="dashboard-tabs" role="tablist">
+              <button class="btn-scheda text-start nav-link active dashboard-tabs-nav pill-tab-active"
+                data-bs-toggle="pill" data-bs-target="#tab-panoramica" role="tab">📊 Panoramica</button>
+              <button class="btn-scheda text-start nav-link dashboard-tabs-nav dashboard-tab-btn pill-tab-inactive"
+                data-bs-toggle="pill" data-bs-target="#tab-utenti" role="tab">👥 Utenti</button>
+              <button class="btn-scheda text-start nav-link dashboard-tabs-nav dashboard-tab-btn pill-tab-inactive"
+                data-bs-toggle="pill" data-bs-target="#tab-insegnanti" role="tab">🎓 Insegnanti</button>
+              <button class="btn-scheda text-start nav-link dashboard-tabs-nav dashboard-tab-btn pill-tab-inactive"
+                data-bs-toggle="pill" data-bs-target="#tab-strumenti" role="tab">🎸 Strumenti</button>
+              <button class="btn-scheda text-start nav-link dashboard-tabs-nav dashboard-tab-btn pill-tab-inactive"
+                data-bs-toggle="pill" data-bs-target="#tab-segnalazioni" role="tab">🚨 Segnalazioni</button>
+            </div>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Contenuto principale -->
+      <main class="col-lg-9">
+        <div class="tab-content">
+
+          <!-- Panoramica -->
+          <div class="tab-pane fade show active" id="tab-panoramica" role="tabpanel">
+            <h1 class="h4 fw-bold mb-4 testo-bianco">Panoramica piattaforma</h1>
+
+            <div class="row g-3 mb-4">
+              <div class="col-sm-3">
+                <div class="stat-card">
+                  <p class="stat-valore">142</p>
+                  <p class="stat-etichetta">Utenti totali</p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="stat-card">
+                  <p class="stat-valore">18</p>
+                  <p class="stat-etichetta">Insegnanti attivi</p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="stat-card">
+                  <p class="stat-valore">64</p>
+                  <p class="stat-etichetta">Strumenti in vendita</p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="stat-card">
+                  <p class="stat-valore testo-oro">€ 8.420</p>
+                  <p class="stat-etichetta">Volume transazioni</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h2 class="sezione-titolo">Richieste in attesa</h2>
+              <div class="d-flex flex-column gap-2 mt-3">
+                <div class="scheda-corso scheda-corso-inline-sm d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <div>
+                    <p class="fw-semibold small mb-0 testo-bianco">Nuova richiesta insegnante — Giulia Ferretti</p>
+                    <p class="small mb-0 testo-muted-inline">Chitarra classica · Inviata il 20/05/2026</p>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button class="btn-scheda btn-scheda-inline">Approva</button>
+                    <button class="btn-annulla-sm btn-outline">Rifiuta</button>
+                  </div>
+                </div>
+                <div class="scheda-corso scheda-corso-inline-sm d-flex justify-content-between align-items-center flex-wrap gap-2">
+                  <div>
+                    <p class="fw-semibold small mb-0 testo-bianco">Segnalazione annuncio — Violino Steiner</p>
+                    <p class="small mb-0 testo-muted-inline">Prezzo sospetto · Segnalato da Mario R.</p>
+                  </div>
+                  <div class="d-flex gap-2">
+                    <button class="btn-scheda btn-scheda-inline">Esamina</button>
+                    <button class="btn-annulla-sm btn-outline">Archivia</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h2 class="sezione-titolo">Attività recente</h2>
+              <div class="table-wrapper mt-3">
+                <div class="table-responsive">
+                  <table class="table mb-0 small table-styled">
+                    <thead>
+                      <tr>
+                        <th>Evento</th>
+                        <th>Utente</th>
+                        <th>Data</th>
+                        <th>Stato</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Nuovo utente registrato</td>
+                        <td class="td-muted">Anna Bianchi</td>
+                        <td class="td-muted">22/05/2026</td>
+                        <td><span class="ins-voto stato-consegnato">OK</span></td>
+                      </tr>
+                      <tr>
+                        <td>Strumento venduto</td>
+                        <td class="td-muted">Luigi V.</td>
+                        <td class="td-muted">21/05/2026</td>
+                        <td><span class="ins-voto stato-consegnato">OK</span></td>
+                      </tr>
+                      <tr>
+                        <td>Richiesta insegnante</td>
+                        <td class="td-muted">Giulia Ferretti</td>
+                        <td class="td-muted">20/05/2026</td>
+                        <td><span class="ins-voto">In attesa</span></td>
+                      </tr>
+                      <tr>
+                        <td>Segnalazione annuncio</td>
+                        <td class="td-muted">Mario Rossi</td>
+                        <td class="td-muted">19/05/2026</td>
+                        <td><span class="ins-voto admin-badge-warning">Da esaminare</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Utenti -->
+          <div class="tab-pane fade" id="tab-utenti" role="tabpanel">
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+              <h1 class="h4 fw-bold testo-bianco mb-0">Gestione utenti</h1>
+              <div class="input-group admin-cerca">
+                <input type="search" class="campo-input campo-input-left" placeholder="Cerca utente…">
+                <button class="btn-primary btn-cerca px-3" type="button">Cerca</button>
+              </div>
+            </div>
+            <div class="table-wrapper">
+              <div class="table-responsive">
+                <table class="table mb-0 small table-styled">
+                  <thead>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Email</th>
+                      <th>Ruolo</th>
+                      <th>Iscritto il</th>
+                      <th>Stato</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Mario Rossi</td>
+                      <td class="td-muted">mario.rossi@email.it</td>
+                      <td><span class="ins-voto">Cliente</span></td>
+                      <td class="td-muted">10/01/2026</td>
+                      <td><span class="ins-voto stato-consegnato">Attivo</span></td>
+                      <td><button class="btn-rimuovi-sm">Sospendi</button></td>
+                    </tr>
+                    <tr>
+                      <td>Marco Rossi</td>
+                      <td class="td-muted">marco.rossi@email.it</td>
+                      <td><span class="ins-voto">Insegnante</span></td>
+                      <td class="td-muted">15/01/2026</td>
+                      <td><span class="ins-voto stato-consegnato">Attivo</span></td>
+                      <td><button class="btn-rimuovi-sm">Sospendi</button></td>
+                    </tr>
+                    <tr>
+                      <td>Anna Bianchi</td>
+                      <td class="td-muted">anna.b@email.it</td>
+                      <td><span class="ins-voto">Cliente</span></td>
+                      <td class="td-muted">22/05/2026</td>
+                      <td><span class="ins-voto stato-consegnato">Attivo</span></td>
+                      <td><button class="btn-rimuovi-sm">Sospendi</button></td>
+                    </tr>
+                    <tr>
+                      <td>Roberto Neri</td>
+                      <td class="td-muted">r.neri@email.it</td>
+                      <td><span class="ins-voto">Cliente</span></td>
+                      <td class="td-muted">03/03/2026</td>
+                      <td><span class="ins-voto admin-badge-warning">Sospeso</span></td>
+                      <td><button class="btn-scheda btn-scheda-inline">Riattiva</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Insegnanti -->
+          <div class="tab-pane fade" id="tab-insegnanti" role="tabpanel">
+            <h1 class="h4 fw-bold mb-4 testo-bianco">Gestione insegnanti</h1>
+
+            <p class="tab-sezione-oro mb-2">Richieste di approvazione</p>
+            <div class="d-flex flex-column gap-2 mb-4">
+              <div class="scheda-corso scheda-corso-inline-sm d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="avatar flex-shrink-0">GF</div>
+                  <div>
+                    <p class="fw-semibold small mb-0 testo-bianco">Giulia Ferretti</p>
+                    <p class="small mb-0 testo-muted-inline">Chitarra classica, Solfeggio · giulia.f@email.it</p>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn-scheda btn-scheda-inline">Approva</button>
+                  <button class="btn-annulla-sm btn-outline">Rifiuta</button>
+                </div>
+              </div>
+            </div>
+
+            <p class="tab-sezione-oro mb-2">Insegnanti attivi</p>
+            <div class="table-wrapper">
+              <div class="table-responsive">
+                <table class="table mb-0 small table-styled">
+                  <thead>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Strumenti</th>
+                      <th>Lezioni</th>
+                      <th>Valutazione</th>
+                      <th>Stato</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Marco Rossi</td>
+                      <td class="td-muted">Chitarra, Pianoforte</td>
+                      <td class="td-muted">24</td>
+                      <td>⭐ 4.8</td>
+                      <td><span class="ins-voto stato-consegnato">Attivo</span></td>
+                      <td><button class="btn-rimuovi-sm">Sospendi</button></td>
+                    </tr>
+                    <tr>
+                      <td>Laura Alberti</td>
+                      <td class="td-muted">Violino, Viola</td>
+                      <td class="td-muted">31</td>
+                      <td>⭐ 4.9</td>
+                      <td><span class="ins-voto stato-consegnato">Attivo</span></td>
+                      <td><button class="btn-rimuovi-sm">Sospendi</button></td>
+                    </tr>
+                    <tr>
+                      <td>Giovanni Turchi</td>
+                      <td class="td-muted">Batteria, Percussioni</td>
+                      <td class="td-muted">18</td>
+                      <td>⭐ 4.7</td>
+                      <td><span class="ins-voto stato-consegnato">Attivo</span></td>
+                      <td><button class="btn-rimuovi-sm">Sospendi</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Strumenti -->
+          <div class="tab-pane fade" id="tab-strumenti" role="tabpanel">
+            <h1 class="h4 fw-bold mb-4 testo-bianco">Strumenti in vendita</h1>
+            <div class="table-wrapper">
+              <div class="table-responsive">
+                <table class="table mb-0 small table-styled">
+                  <thead>
+                    <tr>
+                      <th>Strumento</th>
+                      <th>Venditore</th>
+                      <th>Prezzo</th>
+                      <th>Condizione</th>
+                      <th>Inserito il</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Fender CD-60S</td>
+                      <td class="td-muted">Luigi V.</td>
+                      <td class="testo-oro">€ 220,00</td>
+                      <td><span class="ins-voto">Usato</span></td>
+                      <td class="td-muted">02/05/2026</td>
+                      <td><button class="btn-rimuovi-sm">Rimuovi</button></td>
+                    </tr>
+                    <tr>
+                      <td>Yamaha PSR-E363</td>
+                      <td class="td-muted">MusicHub Store</td>
+                      <td class="testo-oro">€ 180,00</td>
+                      <td><span class="ins-voto stato-consegnato">Nuovo</span></td>
+                      <td class="td-muted">14/04/2026</td>
+                      <td><button class="btn-rimuovi-sm">Rimuovi</button></td>
+                    </tr>
+                    <tr>
+                      <td>Alesis Nitro Mesh</td>
+                      <td class="td-muted">MusicHub Store</td>
+                      <td class="testo-oro">€ 350,00</td>
+                      <td><span class="ins-voto stato-consegnato">Nuovo</span></td>
+                      <td class="td-muted">01/03/2026</td>
+                      <td><button class="btn-rimuovi-sm">Rimuovi</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Segnalazioni -->
+          <div class="tab-pane fade" id="tab-segnalazioni" role="tabpanel">
+            <h1 class="h4 fw-bold mb-4 testo-bianco">Segnalazioni</h1>
+            <div class="d-flex flex-column gap-3">
+
+              <div class="scheda-corso scheda-corso-inline-sm">
+                <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
+                  <div>
+                    <p class="fw-semibold small mb-0 testo-bianco">🚨 Prezzo sospetto — Violino Steiner</p>
+                    <p class="small mb-0 testo-muted-inline">Segnalato da Mario Rossi · 19/05/2026</p>
+                  </div>
+                  <span class="ins-voto admin-badge-warning">Da esaminare</span>
+                </div>
+                <p class="small testo-muted-inline mb-3">Il prezzo dell'annuncio (€ 15,00) sembra troppo basso per un violino in buone condizioni. Possibile errore o tentativo di frode.</p>
+                <div class="d-flex gap-2">
+                  <button class="btn-scheda btn-scheda-inline">Rimuovi annuncio</button>
+                  <button class="btn-outline btn-scheda-inline">Archivia</button>
+                </div>
+              </div>
+
+              <div class="scheda-corso scheda-corso-inline-sm">
+                <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
+                  <div>
+                    <p class="fw-semibold small mb-0 testo-bianco">⚠️ Recensione inappropriata</p>
+                    <p class="small mb-0 testo-muted-inline">Segnalata da Marco Rossi · 15/05/2026</p>
+                  </div>
+                  <span class="ins-voto stato-consegnato">Risolta</span>
+                </div>
+                <p class="small testo-muted-inline mb-3">Recensione contenente linguaggio offensivo. Già rimossa automaticamente dal sistema.</p>
+                <div class="d-flex gap-2">
+                  <button class="btn-outline btn-scheda-inline">Archivia</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-box">
+        <a class="brand" href="index.html">🎵 MusicHub</a>
+        <small class="footer-copy">© 2026 — Università</small>
+        <nav class="footer-nav">
+          <a href="strumenti.html">Strumenti</a>
+          <a href="corsi.html">Lezioni</a>
+          <a href="login.html">Accedi</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btn  = document.getElementById('tema');
+    const html = document.documentElement;
+    if (localStorage.getItem('tema') === 'chiaro') {
+      html.setAttribute('data-tema', 'chiaro');
+      btn.textContent = '☀️';
+    }
+    btn.addEventListener('click', () => {
+      const t = html.getAttribute('data-tema');
+      if (t === 'chiaro') {
+        html.removeAttribute('data-tema');
+        btn.textContent = '🌙';
+        localStorage.setItem('tema', 'scuro');
+      } else {
+        html.setAttribute('data-tema', 'chiaro');
+        btn.textContent = '☀️';
+        localStorage.setItem('tema', 'chiaro');
+      }
+    });
+
+    document.querySelectorAll('[data-bs-toggle="pill"]').forEach(function (tabBtn) {
+      tabBtn.addEventListener('shown.bs.tab', function () {
+        document.querySelectorAll('[data-bs-toggle="pill"]').forEach(function (b) {
+          b.classList.remove('pill-tab-active');
+          b.classList.add('pill-tab-inactive');
+        });
+        tabBtn.classList.remove('pill-tab-inactive');
+        tabBtn.classList.add('pill-tab-active');
+      });
+    });
+  </script>
+</body>
+</html>
