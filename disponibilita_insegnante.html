@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disponibilità — MusicHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-box">
+      <a class="brand" href="index.html">🎵 MusicHub</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="strumenti.html">Strumenti</a></li>
+          <li><a href="corsi.html">Lezioni</a></li>
+        </ul>
+        <div class="nav-azioni">
+          <button id="tema">🌙</button>
+          <span>Ciao, <strong>Marco</strong></span>
+          <a href="login.html">Esci</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-2">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb-custom">
+        <li class="breadcrumb-item-custom"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item-custom"><a href="dashboard_insegnante.html">Dashboard</a></li>
+        <li class="breadcrumb-item-custom attivo">Disponibilità</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="container py-4">
+    <div class="row g-4">
+
+      <!-- Sidebar -->
+      <aside class="col-lg-3">
+        <div class="filter-sidebar rounded-3 p-3">
+          <div class="d-flex align-items-center gap-3 mb-3 pb-3 sidebar-user-border">
+            <div class="avatar flex-shrink-0">MR</div>
+            <div>
+              <p class="fw-semibold mb-0 small testo-bianco">Marco Rossi</p>
+              <p class="mb-0 testo-muted-inline testo-ruolo-small">Insegnante</p>
+            </div>
+          </div>
+          <nav>
+            <div class="d-flex flex-column gap-2">
+              <a href="dashboard_insegnante.html" class="btn-scheda text-start">📊 Dashboard</a>
+              <a href="prenotazioni_insegnante.html" class="btn-scheda text-start">📅 Prenotazioni</a>
+              <a href="disponibilita_insegnante.html" class="btn-scheda text-start active">⏰ Disponibilità</a>
+              <a href="aggiungi_corso.html" class="btn-scheda text-start">🎸 Aggiungi Corso</a>
+            </div>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Contenuto principale -->
+      <main class="col-lg-9">
+        <h1 class="h4 fw-bold mb-4 testo-bianco">Gestisci la tua disponibilità</h1>
+
+        <div class="scheda-corso rounded-3 p-4 mb-4">
+          <h2 class="h5 fw-semibold mb-4 testo-bianco">Orari settimanali</h2>
+          <p class="testo-muted-inline mb-4">Imposta gli orari in cui sei disponibile per insegnare. Gli studenti potranno prenotare solo negli slot liberi.</p>
+
+          <div class="table-responsive">
+            <table class="table table-sm table-borderless">
+              <thead>
+                <tr class="testo-muted-inline">
+                  <th class="pb-2">Giorno</th>
+                  <th class="pb-2">Inizio</th>
+                  <th class="pb-2">Fine</th>
+                  <th class="pb-2">Stato</th>
+                  <th class="pb-2">Azioni</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-bottom border-secondary-subtle">
+                  <td class="py-3 testo-bianco">Lunedì</td>
+                  <td class="py-3 testo-bianco">09:00</td>
+                  <td class="py-3 testo-bianco">12:00</td>
+                  <td class="py-3"><span class="badge bg-success">Attivo</span></td>
+                  <td class="py-3">
+                    <button class="btn-piccolo">✏️</button>
+                    <button class="btn-piccolo">🗑️</button>
+                  </td>
+                </tr>
+                <tr class="border-bottom border-secondary-subtle">
+                  <td class="py-3 testo-bianco">Lunedì</td>
+                  <td class="py-3 testo-bianco">14:00</td>
+                  <td class="py-3 testo-bianco">17:00</td>
+                  <td class="py-3"><span class="badge bg-success">Attivo</span></td>
+                  <td class="py-3">
+                    <button class="btn-piccolo">✏️</button>
+                    <button class="btn-piccolo">🗑️</button>
+                  </td>
+                </tr>
+                <tr class="border-bottom border-secondary-subtle">
+                  <td class="py-3 testo-bianco">Mercoledì</td>
+                  <td class="py-3 testo-bianco">10:00</td>
+                  <td class="py-3 testo-bianco">13:00</td>
+                  <td class="py-3"><span class="badge bg-success">Attivo</span></td>
+                  <td class="py-3">
+                    <button class="btn-piccolo">✏️</button>
+                    <button class="btn-piccolo">🗑️</button>
+                  </td>
+                </tr>
+                <tr class="border-bottom border-secondary-subtle">
+                  <td class="py-3 testo-bianco">Mercoledì</td>
+                  <td class="py-3 testo-bianco">15:00</td>
+                  <td class="py-3 testo-bianco">18:00</td>
+                  <td class="py-3"><span class="badge bg-success">Attivo</span></td>
+                  <td class="py-3">
+                    <button class="btn-piccolo">✏️</button>
+                    <button class="btn-piccolo">🗑️</button>
+                  </td>
+                </tr>
+                <tr class="border-bottom border-secondary-subtle">
+                  <td class="py-3 testo-bianco">Venerdì</td>
+                  <td class="py-3 testo-bianco">16:00</td>
+                  <td class="py-3 testo-bianco">19:00</td>
+                  <td class="py-3"><span class="badge bg-success">Attivo</span></td>
+                  <td class="py-3">
+                    <button class="btn-piccolo">✏️</button>
+                    <button class="btn-piccolo">🗑️</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="py-3 testo-bianco">Sabato</td>
+                  <td class="py-3 testo-bianco">09:00</td>
+                  <td class="py-3 testo-bianco">13:00</td>
+                  <td class="py-3"><span class="badge bg-secondary">Pausa</span></td>
+                  <td class="py-3">
+                    <button class="btn-piccolo">✏️</button>
+                    <button class="btn-piccolo">🗑️</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-4">
+            <button class="btn-primary">+ Aggiungi fascia oraria</button>
+          </div>
+        </div>
+
+        <!-- Vacanze -->
+        <div class="scheda-corso rounded-3 p-4 mb-4">
+          <h2 class="h5 fw-semibold mb-4 testo-bianco">Giorni non disponibili</h2>
+          <p class="testo-muted-inline mb-4">Indica i giorni in cui non sei disponibile (ferie, malattia, ecc).</p>
+
+          <div class="d-flex flex-column gap-2">
+            <div class="d-flex justify-content-between align-items-center p-3 rounded-2" style="background: rgba(255,255,255,0.05);">
+              <div>
+                <p class="testo-bianco mb-0 fw-semibold">Ferie estive</p>
+                <p class="testo-muted-inline mb-0 small">Dal 1 agosto al 31 agosto 2026</p>
+              </div>
+              <button class="btn-piccolo">🗑️</button>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <button class="btn-primary">+ Aggiungi giorni non disponibili</button>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="alert alert-info-custom rounded-3 p-3 mb-4">
+          <p class="mb-0">
+            <strong>💡 Consiglio:</strong> Più slot aggiungi, più probabilità hai di ricevere prenotazioni. 
+            Gli studenti vedranno la tua disponibilità quando consultano il tuo profilo.
+          </p>
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
