@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corsi e tutor — MusicHub (Admin)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-box">
+      <a class="brand" href="index.html">🎵 MusicHub</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="strumenti.html">Strumenti</a></li>
+          <li><a href="corsi.html">Lezioni</a></li>
+        </ul>
+        <div class="nav-azioni">
+          <button id="tema">🌙</button>
+          <span class="ins-voto">🛡️ Admin</span>
+          <a href="login.html">Esci</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+      <h1 class="h4 fw-bold testo-bianco mb-0">Corsi e tutor</h1>
+    </div>
+
+    <div class="mb-4">
+      <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap mb-4">
+        <div class="input-group admin-cerca flex-grow-1">
+          <input type="search" class="campo-input campo-input-left" placeholder="Cerca corso o tutor…">
+          <button class="btn-primary btn-cerca px-3" type="button">Cerca</button>
+        </div>
+        <div class="filtri-inline">
+          <select class="campo-input">
+            <option>Ordina per</option>
+            <option>Più rilevanti</option>
+            <option>Valutazione più alta</option>
+            <option>Prezzo crescente</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="d-flex flex-column gap-3">
+
+        <article class="scheda-corso scheda-corso-list">
+          <div class="row align-items-center g-3">
+            <div class="col-auto">
+              <div class="avatar">MR</div>
+            </div>
+            <div class="col">
+              <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                <div>
+                  <h2 class="h6 fw-bold mb-1 testo-bianco"><a href="profilo_insegnante_admin.html" class="auth-link-oro">Marco Rossi</a></h2>
+                  <p class="small mb-2 testo-muted-inline">Chitarra acustica · Chitarra elettrica · Pianoforte</p>
+                  <div class="d-flex flex-wrap gap-1 mb-2">
+                    <span class="ins-voto">Principiante</span>
+                    <span class="ins-voto">Intermedio</span>
+                    <span class="ins-voto">Avanzato</span>
+                  </div>
+                  <p class="small mb-0 testo-muted-inline">Insegno chitarra da 10 anni. Approccio pratico e graduale, adatto sia a chi parte da zero che a chi vuole migliorare.</p>
+                </div>
+                <div class="text-end flex-shrink-0">
+                  <p class="fw-bold mb-1 testo-oro">€ 30 / ora</p>
+                  <p class="small mb-2 testo-muted-inline">⭐ 4.8 (24 recensioni)</p>
+                  <div class="d-flex gap-2">
+                    <a href="profilo_insegnante_admin.html" class="btn-scheda btn-scheda-inline">Vedi</a>
+                    <button class="btn-rimuovi-sm">🗑️</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="scheda-corso scheda-corso-list">
+          <div class="row align-items-center g-3">
+            <div class="col-auto">
+              <div class="avatar">LA</div>
+            </div>
+            <div class="col">
+              <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                <div>
+                  <h2 class="h6 fw-bold mb-1 testo-bianco"><a href="profilo_insegnante_admin.html" class="auth-link-oro">Laura Alberti</a></h2>
+                  <p class="small mb-2 testo-muted-inline">Violino · Viola · Teoria musicale</p>
+                  <div class="d-flex flex-wrap gap-1 mb-2">
+                    <span class="ins-voto">Principiante</span>
+                    <span class="ins-voto">Intermedio</span>
+                  </div>
+                  <p class="small mb-0 testo-muted-inline">Diplomata al Conservatorio di Milano. Lezioni strutturate con metodo Suzuki e approccio classico.</p>
+                </div>
+                <div class="text-end flex-shrink-0">
+                  <p class="fw-bold mb-1 testo-oro">€ 40 / ora</p>
+                  <p class="small mb-2 testo-muted-inline">⭐ 4.9 (31 recensioni)</p>
+                  <div class="d-flex gap-2">
+                    <a href="profilo_insegnante_admin.html" class="btn-scheda btn-scheda-inline">Vedi</a>
+                    <button class="btn-rimuovi-sm">🗑️</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="scheda-corso scheda-corso-list">
+          <div class="row align-items-center g-3">
+            <div class="col-auto">
+              <div class="avatar">GT</div>
+            </div>
+            <div class="col">
+              <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                <div>
+                  <h2 class="h6 fw-bold mb-1 testo-bianco"><a href="profilo_insegnante_admin.html" class="auth-link-oro">Giovanni Turchi</a></h2>
+                  <p class="small mb-2 testo-muted-inline">Batteria · Percussioni · Ritmica</p>
+                  <div class="d-flex flex-wrap gap-1 mb-2">
+                    <span class="ins-voto">Principiante</span>
+                    <span class="ins-voto">Intermedio</span>
+                    <span class="ins-voto">Avanzato</span>
+                  </div>
+                  <p class="small mb-0 testo-muted-inline">Batterista professionista e insegnante con 8 anni di esperienza. Lezioni personalizzate per tutte le esigenze.</p>
+                </div>
+                <div class="text-end flex-shrink-0">
+                  <p class="fw-bold mb-1 testo-oro">€ 25 / ora</p>
+                  <p class="small mb-2 testo-muted-inline">⭐ 4.7 (18 recensioni)</p>
+                  <div class="d-flex gap-2">
+                    <a href="profilo_insegnante_admin.html" class="btn-scheda btn-scheda-inline">Vedi</a>
+                    <button class="btn-rimuovi-sm">🗑️</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-box">
+        <a class="brand" href="index.html">🎵 MusicHub</a>
+        <small class="footer-copy">© 2026 — Università</small>
+        <nav class="footer-nav">
+          <a href="strumenti.html">Strumenti</a>
+          <a href="corsi.html">Lezioni</a>
+          <a href="login.html">Accedi</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btn  = document.getElementById('tema');
+    const html = document.documentElement;
+    if (localStorage.getItem('tema') === 'chiaro') {
+      html.setAttribute('data-tema', 'chiaro');
+      btn.textContent = '☀️';
+    }
+    btn.addEventListener('click', () => {
+      const t = html.getAttribute('data-tema');
+      if (t === 'chiaro') {
+        html.removeAttribute('data-tema');
+        btn.textContent = '🌙';
+        localStorage.setItem('tema', 'scuro');
+      } else {
+        html.setAttribute('data-tema', 'chiaro');
+        btn.textContent = '☀️';
+        localStorage.setItem('tema', 'chiaro');
+      }
+    });
+  </script>
+</body>
+</html>

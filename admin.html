@@ -16,8 +16,8 @@
       <label for="menu-toggle" class="hamburger">☰</label>
       <div class="nav-menu">
         <ul class="nav-links">
-          <li><a href="strumenti.html">Strumenti</a></li>
-          <li><a href="corsi.html">Lezioni</a></li>
+          <li><a href="strumenti_admin.html">Strumenti</a></li>
+          <li><a href="corsi_admin.html">Lezioni</a></li>
         </ul>
         <div class="nav-azioni">
           <button id="tema">🌙</button>
@@ -227,7 +227,10 @@
 
           <!-- Insegnanti -->
           <div class="tab-pane fade" id="tab-insegnanti" role="tabpanel">
-            <h1 class="h4 fw-bold mb-4 testo-bianco">Gestione insegnanti</h1>
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+              <h1 class="h4 fw-bold testo-bianco mb-0">Gestione insegnanti</h1>
+              <a href="corsi_admin.html" class="btn-outline">Gestisci tutti →</a>
+            </div>
 
             <p class="tab-sezione-oro mb-2">Richieste di approvazione</p>
             <div class="d-flex flex-column gap-2 mb-4">
@@ -262,7 +265,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Marco Rossi</td>
+                      <td><a href="profilo_insegnante_admin.html" class="auth-link-oro">Marco Rossi</a></td>
                       <td class="td-muted">Chitarra, Pianoforte</td>
                       <td class="td-muted">24</td>
                       <td>⭐ 4.8</td>
@@ -270,7 +273,7 @@
                       <td><button class="btn-rimuovi-sm">Sospendi</button></td>
                     </tr>
                     <tr>
-                      <td>Laura Alberti</td>
+                      <td><a href="profilo_insegnante_admin.html" class="auth-link-oro">Laura Alberti</a></td>
                       <td class="td-muted">Violino, Viola</td>
                       <td class="td-muted">31</td>
                       <td>⭐ 4.9</td>
@@ -278,7 +281,7 @@
                       <td><button class="btn-rimuovi-sm">Sospendi</button></td>
                     </tr>
                     <tr>
-                      <td>Giovanni Turchi</td>
+                      <td><a href="profilo_insegnante_admin.html" class="auth-link-oro">Giovanni Turchi</a></td>
                       <td class="td-muted">Batteria, Percussioni</td>
                       <td class="td-muted">18</td>
                       <td>⭐ 4.7</td>
@@ -293,7 +296,13 @@
 
           <!-- Strumenti -->
           <div class="tab-pane fade" id="tab-strumenti" role="tabpanel">
-            <h1 class="h4 fw-bold mb-4 testo-bianco">Strumenti in vendita</h1>
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+              <h1 class="h4 fw-bold testo-bianco mb-0">Strumenti in vendita</h1>
+              <div class="d-flex gap-2">
+                <a href="add_strumento.html" class="btn-primary">➕ Aggiungi strumento</a>
+                <a href="strumenti_admin.html" class="btn-outline">Gestisci tutti →</a>
+              </div>
+            </div>
             <div class="table-wrapper">
               <div class="table-responsive">
                 <table class="table mb-0 small table-styled">
@@ -309,7 +318,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Fender CD-60S</td>
+                      <td><a href="strumento_dettaglio_admin.html" class="auth-link-oro">Fender CD-60S</a></td>
                       <td class="td-muted">Luigi V.</td>
                       <td class="testo-oro">€ 220,00</td>
                       <td><span class="ins-voto">Usato</span></td>
@@ -317,7 +326,7 @@
                       <td><button class="btn-rimuovi-sm">Rimuovi</button></td>
                     </tr>
                     <tr>
-                      <td>Yamaha PSR-E363</td>
+                      <td><a href="strumento_dettaglio_admin.html" class="auth-link-oro">Yamaha PSR-E363</a></td>
                       <td class="td-muted">MusicHub Store</td>
                       <td class="testo-oro">€ 180,00</td>
                       <td><span class="ins-voto stato-consegnato">Nuovo</span></td>
@@ -325,7 +334,7 @@
                       <td><button class="btn-rimuovi-sm">Rimuovi</button></td>
                     </tr>
                     <tr>
-                      <td>Alesis Nitro Mesh</td>
+                      <td><a href="strumento_dettaglio_admin.html" class="auth-link-oro">Alesis Nitro Mesh</a></td>
                       <td class="td-muted">MusicHub Store</td>
                       <td class="testo-oro">€ 350,00</td>
                       <td><span class="ins-voto stato-consegnato">Nuovo</span></td>

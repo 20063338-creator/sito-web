@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fender CD-60S — MusicHub (Admin)</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-box">
+      <a class="brand" href="index.html">🎵 MusicHub</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="strumenti.html">Strumenti</a></li>
+          <li><a href="corsi.html">Lezioni</a></li>
+        </ul>
+        <div class="nav-azioni">
+          <button id="tema">🌙</button>
+          <span>Ciao, <strong>Admin</strong></span>
+          <a href="login.html">Esci</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-2">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb-custom">
+        <li class="breadcrumb-item-custom"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item-custom"><a href="admin.html">Admin</a></li>
+        <li class="breadcrumb-item-custom attivo">Fender CD-60S</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="container py-4">
+    <div class="row g-4">
+
+      <main class="col-lg-8">
+
+        <!-- Immagine prodotto -->
+        <div class="dettaglio-img-box mb-4">
+          <span class="dettaglio-emoji">🎸</span>
+        </div>
+
+        <!-- Info prodotto -->
+        <div class="dettaglio-header mb-4">
+          <div>
+            <p class="categoria">Chitarre acustiche</p>
+            <h1 class="dettaglio-titolo">Fender CD-60S</h1>
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="ins-voto badge-stato">Usato</span>
+              <span class="testo-muted-inline small">Inserito il 02/05/2026</span>
+            </div>
+          </div>
+          <div class="d-flex align-items-start gap-2 flex-wrap">
+            <p class="dettaglio-prezzo mb-0">€ 220,00</p>
+            <button class="btn-primary">✏️ Modifica</button>
+            <button class="btn-danger-outline">🗑️ Elimina</button>
+          </div>
+        </div>
+
+        <section class="profilo-sezione">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="sezione-titolo">Descrizione</h2>
+            <button class="btn-piccolo">✏️</button>
+          </div>
+          <p class="profilo-testo">Chitarra acustica Fender CD-60S in ottimo stato. Acquistata circa 2 anni fa e poco usata. Corpo in mogano massello con copertura in abete solido, manico in mogano con tastiera in noce. Ideale per principianti e per chi vuole uno strumento di qualità a un prezzo accessibile.</p>
+          <p class="profilo-testo">Nessun graffio significativo, tasti in perfette condizioni, meccaniche originali funzionanti. Viene venduta con custodia morbida inclusa.</p>
+        </section>
+
+        <section class="profilo-sezione">
+          <h2 class="sezione-titolo">Specifiche tecniche</h2>
+          <dl class="specifiche-lista">
+            <div class="specifiche-riga">
+              <dt class="specifiche-label">Marca</dt>
+              <dd class="specifiche-valore">Fender</dd>
+            </div>
+            <div class="specifiche-riga">
+              <dt class="specifiche-label">Modello</dt>
+              <dd class="specifiche-valore">CD-60S</dd>
+            </div>
+            <div class="specifiche-riga">
+              <dt class="specifiche-label">Tipo</dt>
+              <dd class="specifiche-valore">Chitarra acustica</dd>
+            </div>
+            <div class="specifiche-riga">
+              <dt class="specifiche-label">Corpo</dt>
+              <dd class="specifiche-valore">Dreadnought — mogano massello</dd>
+            </div>
+            <div class="specifiche-riga">
+              <dt class="specifiche-label">Copertura</dt>
+              <dd class="specifiche-valore">Abete solido</dd>
+            </div>
+            <div class="specifiche-riga">
+              <dt class="specifiche-label">Manico</dt>
+              <dd class="specifiche-valore">Mogano</dd>
+            </div>
+            <div class="specifiche-riga">
+              <dt class="specifiche-label">Tastiera</dt>
+              <dd class="specifiche-valore">Noce — 20 tasti</dd>
+            </div>
+            <div class="specifiche-riga">
+              <dt class="specifiche-label">Condizione</dt>
+              <dd class="specifiche-valore">Usato — ottime condizioni</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="profilo-sezione">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="sezione-titolo">Venditore</h2>
+          </div>
+          <div class="venditore-card">
+            <div class="avatar flex-shrink-0">LV</div>
+            <div class="venditore-info">
+              <p class="venditore-nome">Luigi V.</p>
+              <p class="testo-muted-inline small mb-0">Membro dal marzo 2024 · 4 vendite completate</p>
+            </div>
+            <span class="ins-voto stato-consegnato">Affidabile</span>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="col-lg-4">
+        <div class="sidebar-prenotazione">
+          <h2 class="sidebar-titolo">Statistiche</h2>
+          <dl class="attivita-lista">
+            <div class="attivita-riga">
+              <dt class="attivita-label">Prezzo</dt>
+              <dd class="attivita-valore">€ 220,00</dd>
+            </div>
+            <div class="attivita-riga">
+              <dt class="attivita-label">Stato</dt>
+              <dd class="attivita-valore"><span class="ins-voto stato-consegnato">In vendita</span></dd>
+            </div>
+            <div class="attivita-riga">
+              <dt class="attivita-label">Visualizzazioni</dt>
+              <dd class="attivita-valore">247</dd>
+            </div>
+            <div class="attivita-riga">
+              <dt class="attivita-label">Inserito il</dt>
+              <dd class="attivita-valore">02/05/2026</dd>
+            </div>
+            <div class="attivita-riga">
+              <dt class="attivita-label">Proprietario</dt>
+              <dd class="attivita-valore">MusicHub Store</dd>
+            </div>
+          </dl>
+          <hr class="hr-bordo">
+          <a href="admin.html" class="btn-outline auth-btn-full text-center">Torna all'admin</a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-box">
+        <a class="brand" href="index.html">🎵 MusicHub</a>
+        <small class="footer-copy">© 2026 — Università</small>
+        <nav class="footer-nav">
+          <a href="strumenti.html">Strumenti</a>
+          <a href="corsi.html">Lezioni</a>
+          <a href="login.html">Accedi</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btn  = document.getElementById('tema');
+    const html = document.documentElement;
+    if (localStorage.getItem('tema') === 'chiaro') {
+      html.setAttribute('data-tema', 'chiaro');
+      btn.textContent = '☀️';
+    }
+    btn.addEventListener('click', () => {
+      const t = html.getAttribute('data-tema');
+      if (t === 'chiaro') {
+        html.removeAttribute('data-tema');
+        btn.textContent = '🌙';
+        localStorage.setItem('tema', 'scuro');
+      } else {
+        html.setAttribute('data-tema', 'chiaro');
+        btn.textContent = '☀️';
+        localStorage.setItem('tema', 'chiaro');
+      }
+    });
+  </script>
+</body>
+</html>

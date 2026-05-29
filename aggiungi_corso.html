@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aggiungi corso — MusicHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-box">
+      <a class="brand" href="index.html">🎵 MusicHub</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="strumenti.html">Strumenti</a></li>
+          <li><a href="corsi.html">Lezioni</a></li>
+        </ul>
+        <div class="nav-azioni">
+          <button id="tema">🌙</button>
+          <span>Ciao, <strong>Marco</strong></span>
+          <a href="login.html">Esci</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-2">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb-custom">
+        <li class="breadcrumb-item-custom"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item-custom"><a href="dashboard_insegnante.html">Dashboard</a></li>
+        <li class="breadcrumb-item-custom attivo">Aggiungi corso</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="container py-4">
+    <div class="row g-4">
+
+      <aside class="col-lg-3">
+        <div class="filter-sidebar rounded-3 p-3">
+          <div class="d-flex align-items-center gap-3 mb-3 pb-3 sidebar-user-border">
+            <div class="avatar flex-shrink-0">MR</div>
+            <div>
+              <p class="fw-semibold mb-0 small testo-bianco">Marco Rossi</p>
+              <p class="mb-0 testo-muted-inline testo-ruolo-small">Insegnante</p>
+            </div>
+          </div>
+          <nav>
+            <div class="d-flex flex-column gap-2">
+              <a href="dashboard_insegnante.html" class="btn-scheda text-start">📊 Dashboard</a>
+              <a href="prenotazioni_insegnante.html" class="btn-scheda text-start">📅 Prenotazioni</a>
+              <a href="disponibilita_insegnante.html" class="btn-scheda text-start">⏰ Disponibilità</a>
+              <a href="aggiungi_corso.html" class="btn-scheda text-start pill-tab-active">🎸 Aggiungi corso</a>
+            </div>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="col-lg-9">
+        <h1 class="h4 fw-bold mb-4 testo-bianco">Aggiungi un nuovo corso</h1>
+
+        <div class="rounded-3 p-4 form-profilo-bg">
+
+          <div class="mb-3">
+            <label for="corso-titolo" class="campo-label">Titolo del corso</label>
+            <input type="text" id="corso-titolo" class="campo-input" placeholder="es. Chitarra per principianti">
+          </div>
+
+          <div class="row g-3 mb-3">
+            <div class="col-sm-6">
+              <label for="corso-strumento" class="campo-label">Strumento</label>
+              <select id="corso-strumento" class="campo-input">
+                <option value="">Seleziona strumento…</option>
+                <option>Chitarra acustica</option>
+                <option>Chitarra elettrica</option>
+                <option>Pianoforte</option>
+                <option>Violino</option>
+                <option>Batteria</option>
+                <option>Flauto</option>
+                <option>Tromba</option>
+                <option>Canto</option>
+              </select>
+            </div>
+            <div class="col-sm-6">
+              <label for="corso-livello" class="campo-label">Livello</label>
+              <select id="corso-livello" class="campo-input">
+                <option value="">Seleziona livello…</option>
+                <option>Principiante</option>
+                <option>Intermedio</option>
+                <option>Avanzato</option>
+                <option>Tutti i livelli</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="corso-descrizione" class="campo-label">Descrizione</label>
+            <textarea id="corso-descrizione" class="campo-input" rows="4" placeholder="Descrivi cosa imparerà lo studente, il metodo che usi, a chi è adatto…"></textarea>
+          </div>
+
+          <div class="row g-3 mb-3">
+            <div class="col-sm-6">
+              <label for="corso-durata" class="campo-label">Durata (minuti)</label>
+              <select id="corso-durata" class="campo-input">
+                <option value="30">30 minuti</option>
+                <option value="45">45 minuti</option>
+                <option value="60" selected>60 minuti</option>
+                <option value="90">90 minuti</option>
+              </select>
+            </div>
+            <div class="col-sm-6">
+              <label for="corso-prezzo" class="campo-label">Prezzo per lezione (€)</label>
+              <input type="number" id="corso-prezzo" class="campo-input" placeholder="es. 30" min="1">
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label for="corso-modalita" class="campo-label">Modalità</label>
+            <div class="auth-radio-lista">
+              <div class="auth-radio-card">
+                <input class="auth-check" type="radio" name="modalita" id="mod-online" checked>
+                <label class="auth-radio-label" for="mod-online">
+                  <span class="auth-radio-titolo">🌐 Online</span>
+                  <span class="auth-radio-desc">Lezione tramite videochiamata</span>
+                </label>
+              </div>
+              <div class="auth-radio-card">
+                <input class="auth-check" type="radio" name="modalita" id="mod-presenza">
+                <label class="auth-radio-label" for="mod-presenza">
+                  <span class="auth-radio-titolo">📍 In presenza</span>
+                  <span class="auth-radio-desc">Lezione dal vivo nel luogo concordato</span>
+                </label>
+              </div>
+              <div class="auth-radio-card">
+                <input class="auth-check" type="radio" name="modalita" id="mod-entrambi">
+                <label class="auth-radio-label" for="mod-entrambi">
+                  <span class="auth-radio-titolo">🔄 Entrambe</span>
+                  <span class="auth-radio-desc">Lo studente sceglie la modalità</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex gap-3">
+            <button class="btn-primary">Pubblica corso</button>
+            <a href="dashboard_insegnante.html" class="btn-outline">Annulla</a>
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-box">
+        <a class="brand" href="index.html">🎵 MusicHub</a>
+        <small class="footer-copy">© 2026 — Università</small>
+        <nav class="footer-nav">
+          <a href="strumenti.html">Strumenti</a>
+          <a href="corsi.html">Lezioni</a>
+          <a href="login.html">Accedi</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btn  = document.getElementById('tema');
+    const html = document.documentElement;
+    if (localStorage.getItem('tema') === 'chiaro') {
+      html.setAttribute('data-tema', 'chiaro');
+      btn.textContent = '☀️';
+    }
+    btn.addEventListener('click', () => {
+      const t = html.getAttribute('data-tema');
+      if (t === 'chiaro') {
+        html.removeAttribute('data-tema');
+        btn.textContent = '🌙';
+        localStorage.setItem('tema', 'scuro');
+      } else {
+        html.setAttribute('data-tema', 'chiaro');
+        btn.textContent = '☀️';
+        localStorage.setItem('tema', 'chiaro');
+      }
+    });
+  </script>
+</body>
+</html>
