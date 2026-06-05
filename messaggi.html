@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messaggi — MusicHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-box">
+      <a class="brand" href="index.html">🎵 MusicHub</a>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="strumenti.html">Strumenti</a></li>
+          <li><a href="corsi.html">Lezioni</a></li>
+        </ul>
+        <div class="nav-azioni">
+          <button id="tema" aria-label="Cambia tema chiaro/scuro">🌙</button>
+          <span>Ciao, <strong>Marco</strong></span>
+          <a href="login.html">Esci</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container py-4">
+    <div class="row g-4">
+      <aside class="col-lg-3">
+        <div class="sidebar-box rounded-3 p-3">
+          <div class="d-flex align-items-center gap-3 mb-3 pb-3 sidebar-user-border">
+            <div class="avatar flex-shrink-0">MR</div>
+            <div>
+              <p class="fw-semibold mb-0 small testo-bianco">Marco Rossi</p>
+              <p class="mb-0 testo-muted-inline testo-ruolo-small">Insegnante</p>
+            </div>
+          </div>
+          <nav>
+            <div class="d-flex flex-column gap-2">
+              <a href="dashboard_insegnante.html" class="btn-scheda text-start">📊 Dashboard</a>
+              <a href="prenotazioni_insegnante.html" class="btn-scheda text-start">📅 Prenotazioni</a>
+              <a href="corsi_insegnante.html" class="btn-scheda text-start dashboard-tabs-nav">🎸 I miei corsi</a>
+              <a href="guadagni_insegnante.html" class="btn-scheda text-start dashboard-tabs-nav">💰 Guadagni</a>
+              <a href="messaggi.html" class="btn-scheda text-start pill-tab-active">💬 Messaggi</a>
+            </div>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="col-lg-9">
+        <h1 class="h4 fw-bold mb-4 testo-bianco">Messaggi</h1>
+        <div class="row g-3">
+
+          <!-- Lista conversazioni -->
+          <div class="col-md-5">
+            <div class="chat-conversazioni">
+              <a href="messaggi.html" class="conversazione attiva">
+                <div class="avatar flex-shrink-0">MR</div>
+                <div class="conversazione-info">
+                  <p class="conversazione-nome">Mario Rossi</p>
+                  <p class="conversazione-anteprima">Perfetto, ci vediamo lunedì allora!</p>
+                </div>
+                <span class="conversazione-ora">10:24</span>
+              </a>
+              <a href="messaggi.html" class="conversazione">
+                <div class="avatar flex-shrink-0">GL</div>
+                <div class="conversazione-info">
+                  <p class="conversazione-nome">Giulia Levi</p>
+                  <p class="conversazione-anteprima">Ciao Marco, come va?</p>
+                </div>
+                <span class="conversazione-ora">Ieri</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Thread attivo -->
+          <div class="col-md-7">
+            <div class="chat-box">
+              <div class="chat-intestazione">
+                <div class="avatar flex-shrink-0">MR</div>
+                <div>
+                  <p class="conversazione-nome mb-0">Mario Rossi</p>
+                  <p class="testo-muted-inline small mb-0">Chitarra per principianti</p>
+                </div>
+              </div>
+              <div class="chat-thread">
+                <div class="chat-msg chat-msg-in">
+                  Buongiorno Marco, volevo confermare la lezione di lunedì.
+                  <span class="chat-meta">09:58</span>
+                </div>
+                <div class="chat-msg chat-msg-out">
+                  Ciao Mario, confermo: lunedì alle 18:00.
+                  <span class="chat-meta">10:05</span>
+                </div>
+                <div class="chat-msg chat-msg-in">
+                  Perfetto, ci vediamo lunedì allora!
+                  <span class="chat-meta">10:24</span>
+                </div>
+              </div>
+              <div class="chat-input-riga">
+                <label for="msg-testo" class="visually-hidden">Scrivi un messaggio</label>
+                <input type="text" id="msg-testo" class="campo-input" placeholder="Scrivi un messaggio…">
+                <button class="btn-primary" type="button">Invia</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-box">
+        <a class="brand" href="index.html">🎵 MusicHub</a>
+        <small class="footer-copy">20063338 — Uniupo</small>
+        <nav class="footer-nav" aria-label="Navigazione footer">
+          <a href="strumenti.html">Strumenti</a>
+          <a href="corsi.html">Lezioni</a>
+          <a href="login.html">Accedi</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btn  = document.getElementById('tema');
+    const html = document.documentElement;
+    if (localStorage.getItem('tema') === 'chiaro') {
+      html.setAttribute('data-tema', 'chiaro');
+      btn.textContent = '☀️';
+    }
+    btn.addEventListener('click', () => {
+      const t = html.getAttribute('data-tema');
+      if (t === 'chiaro') {
+        html.removeAttribute('data-tema');
+        btn.textContent = '🌙';
+        localStorage.setItem('tema', 'scuro');
+      } else {
+        html.setAttribute('data-tema', 'chiaro');
+        btn.textContent = '☀️';
+        localStorage.setItem('tema', 'chiaro');
+      }
+    });
+  </script>
+</body>
+</html>

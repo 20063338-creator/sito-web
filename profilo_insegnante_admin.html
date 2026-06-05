@@ -20,7 +20,7 @@
           <li><a href="corsi.html">Lezioni</a></li>
         </ul>
         <div class="nav-azioni">
-          <button id="tema">🌙</button>
+          <button id="tema" aria-label="Cambia tema chiaro/scuro">🌙</button>
           <span>Ciao, <strong>Admin</strong></span>
           <a href="login.html">Esci</a>
         </div>
@@ -28,69 +28,46 @@
     </div>
   </nav>
 
-  <div class="container py-2">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb-custom">
-        <li class="breadcrumb-item-custom"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item-custom"><a href="admin.html">Admin</a></li>
-        <li class="breadcrumb-item-custom attivo">Marco Rossi (Insegnante)</li>
-      </ol>
-    </nav>
-  </div>
 
   <div class="container py-4">
     <div class="row g-4">
 
       <main class="col-lg-8">
-
         <div class="profilo-intestazione">
-          <div class="d-flex justify-content-between align-items-start gap-3 flex-wrap">
-            <div class="d-flex align-items-start gap-3 flex-grow-1">
-              <div class="avatar-lg flex-shrink-0">MR</div>
-              <div class="profilo-info">
-                <h1 class="profilo-nome">Marco Rossi</h1>
-                <p class="profilo-ruolo">Insegnante di chitarra e pianoforte · Milano</p>
-                <div class="profilo-badge-lista">
-                  <span class="ins-voto">🎸 Chitarra acustica</span>
-                  <span class="ins-voto">🎸 Chitarra elettrica</span>
-                  <span class="ins-voto">🎹 Pianoforte</span>
-                </div>
-                <div class="profilo-meta">
-                  <span>⭐ 4.8 / 5</span>
-                  <span>24 recensioni</span>
-                  <span>10 anni di esperienza</span>
-                </div>
-              </div>
+          <div class="avatar2"><img src="Immagini/prof.png" alt="Marco Rossi"></div>
+          <div class="profilo-info">
+            <h1 class="profilo-nome">Marco Rossi</h1>
+            <p class="profilo-ruolo">Insegnante di chitarra e pianoforte</p>
+            <div class="profilo-badge-lista">
+              <p class="small mb-2 testo-muted-inline">Chitarra acustica · Pianoforte</p>
             </div>
-            <div class="d-flex gap-2 flex-wrap">
-              <button class="btn-primary">✏️ Modifica</button>
-              <button class="btn-danger-outline">🗑️ Sospendi</button>
+            <div class="profilo-meta">
+              <span>⭐ 4.5 / 5</span>
+              <span>2 recensioni</span>
+              <span>10 anni di esperienza</span>
             </div>
+          </div>
+          <div class="d-flex gap-2 flex-wrap">
+            <button class="btn-danger-outline">Rimuovi</button>
           </div>
         </div>
 
         <section class="profilo-sezione">
           <div class="d-flex justify-content-between align-items-center mb-3">
             <h2 class="sezione-titolo">Chi sono</h2>
-            <button class="btn-piccolo">✏️</button>
+            
           </div>
-          <p class="profilo-testo">Sono un chitarrista con oltre 10 anni di esperienza nell'insegnamento, sia a bambini che ad adulti. Ho studiato al Conservatorio di Milano e ho suonato in vari gruppi rock e jazz nel corso degli anni.</p>
-          <p class="profilo-testo">Le mie lezioni sono pratiche e progressive: si parte dalle basi fino ad arrivare a brani veri e propri nel più breve tempo possibile. Adatto il programma alle esigenze di ogni studente.</p>
+          <p class="profilo-testo">Sono un chitarrista con oltre 10 anni di esperienza nell'insegnamento.</p>
+          <p class="profilo-testo">Lezioni pratiche e progressive: si parte dalle basi fino a brani veri e propri.</p>
         </section>
 
         <section class="profilo-sezione">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <h2 class="sezione-titolo">Corsi disponibili</h2>
-            <button class="btn-piccolo">➕</button>
-          </div>
+          <h2 class="sezione-titolo">Corsi disponibili</h2>
           <div class="row g-3">
 
             <div class="col-sm-6">
               <div class="scheda-corso">
-                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-                  <h3 class="scheda-corso-titolo">Chitarra per principianti</h3>
-                  <button class="btn-piccolo">✏️</button>
-                </div>
+                <h3 class="scheda-corso-titolo">Chitarra per principianti</h3>
                 <p class="scheda-corso-desc">Parti da zero e impara le basi: accordi aperti, ritmo e le prime canzoni.</p>
                 <div class="scheda-corso-footer">
                   <span class="scheda-corso-meta">60 min · Principiante</span>
@@ -101,14 +78,22 @@
 
             <div class="col-sm-6">
               <div class="scheda-corso">
-                <div class="d-flex justify-content-between align-items-start gap-2 mb-2">
-                  <h3 class="scheda-corso-titolo">Chitarra intermedia</h3>
-                  <button class="btn-piccolo">✏️</button>
-                </div>
-                <p class="scheda-corso-desc">Barre, scale pentatoniche, improvvisazione base e analisi di brani.</p>
+                <h3 class="scheda-corso-titolo">Chitarra intermedia</h3>
+                <p class="scheda-corso-desc">Improvvisazione base e analisi di brani.</p>
                 <div class="scheda-corso-footer">
                   <span class="scheda-corso-meta">60 min · Intermedio</span>
                   <span class="scheda-corso-prezzo">€ 35</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="scheda-corso">
+                <h3 class="scheda-corso-titolo">Pianoforte per adulti</h3>
+                <p class="scheda-corso-desc">Lezione pensata per chi inizia da zero, con brani moderni e classici.</p>
+                <div class="scheda-corso-footer">
+                  <span class="scheda-corso-meta">60 min · Principiante</span>
+                  <span class="scheda-corso-prezzo">€ 30</span>
                 </div>
               </div>
             </div>
@@ -128,7 +113,7 @@
                 <span class="ins-voto">⭐ 5/5</span>
                 <button class="btn-piccolo">🗑️</button>
               </div>
-              <p class="recensione-testo">Marco è un insegnante fantastico. In pochi mesi sono riuscita a suonare i miei brani preferiti. Molto paziente e chiaro nelle spiegazioni.</p>
+              <p class="recensione-testo">Marco è un insegnante fantastico.</p>
             </div>
 
             <div class="scheda-recensione">
@@ -137,7 +122,7 @@
                 <span class="ins-voto">⭐ 4/5</span>
                 <button class="btn-piccolo">🗑️</button>
               </div>
-              <p class="recensione-testo">Buon metodo, lezioni ben strutturate. A volte si va un po' veloci ma basta dirlo e adatta il ritmo subito.</p>
+              <p class="recensione-testo">Buon metodo.</p>
             </div>
 
           </div>
@@ -159,15 +144,11 @@
             </div>
             <div class="attivita-riga">
               <dt class="attivita-label">Lezioni completate</dt>
-              <dd class="attivita-valore">34</dd>
+              <dd class="attivita-valore">4</dd>
             </div>
             <div class="attivita-riga">
               <dt class="attivita-label">Guadagno totale</dt>
-              <dd class="attivita-valore testo-oro">€ 1.020,00</dd>
-            </div>
-            <div class="attivita-riga">
-              <dt class="attivita-label">Stato</dt>
-              <dd class="attivita-valore"><span class="ins-voto stato-consegnato">Attivo</span></dd>
+              <dd class="attivita-valore testo-oro">€ 120,00</dd>
             </div>
           </dl>
           <hr class="hr-bordo">
@@ -182,8 +163,8 @@
     <div class="container">
       <div class="footer-box">
         <a class="brand" href="index.html">🎵 MusicHub</a>
-        <small class="footer-copy">© 2026 — Università</small>
-        <nav class="footer-nav" aria-label="Footer navigation">
+        <small class="footer-copy">20063338 — Uniupo</small>
+        <nav class="footer-nav" aria-label="Navigazione footer">
           <a href="strumenti.html">Strumenti</a>
           <a href="corsi.html">Lezioni</a>
           <a href="login.html">Accedi</a>

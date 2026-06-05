@@ -20,7 +20,7 @@
           <li><a href="corsi.html">Lezioni</a></li>
         </ul>
         <div class="nav-azioni">
-          <button id="tema">🌙</button>
+          <button id="tema" aria-label="Cambia tema chiaro/scuro">🌙</button>
           <a href="login.html">Accedi</a>
           <a href="login.html#registrati">Registrati</a>
         </div>
@@ -28,15 +28,6 @@
     </div>
   </nav>
 
-  <div class="container py-2">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb-custom">
-        <li class="breadcrumb-item-custom"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item-custom"><a href="strumenti.html">Strumenti</a></li>
-        <li class="breadcrumb-item-custom attivo">Carrello</li>
-      </ol>
-    </nav>
-  </div>
 
   <div class="container py-4">
     <h1 class="h3 fw-bold testo-bianco mb-4">Il tuo carrello</h1>
@@ -51,7 +42,7 @@
             <div class="carrello-info">
               <p class="categoria mb-0">Chitarre acustiche</p>
               <h2 class="nome mb-1">Fender CD-60S</h2>
-              <p class="testo-muted-inline small mb-0">Venditore: Luigi V. · Usato</p>
+              <p class="testo-muted-inline small mb-0">Nuovo</p>
             </div>
             <div class="carrello-azioni">
               <p class="prezzo mb-2">€ 220,00</p>
@@ -59,6 +50,10 @@
                 <label for="qty-1" class="visually-hidden">Quantità</label>
                 <select id="qty-1" class="campo-input select-qty">
                   <option value="1" selected>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
                 </select>
               </div>
               <button class="btn-rimuovi">Rimuovi</button>
@@ -70,7 +65,7 @@
             <div class="carrello-info">
               <p class="categoria mb-0">Tastiere</p>
               <h2 class="nome mb-1">Yamaha PSR-E363</h2>
-              <p class="testo-muted-inline small mb-0">Venditore: MusicHub Store · Nuovo</p>
+              <p class="testo-muted-inline small mb-0">Nuovo</p>
             </div>
             <div class="carrello-azioni">
               <p class="prezzo mb-2">€ 180,00</p>
@@ -78,6 +73,10 @@
                 <label for="qty-2" class="visually-hidden">Quantità</label>
                 <select id="qty-2" class="campo-input select-qty">
                   <option value="1" selected>1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
                 </select>
               </div>
               <button class="btn-rimuovi">Rimuovi</button>
@@ -106,7 +105,7 @@
             </div>
             <div class="attivita-riga">
               <dt class="attivita-label">Spedizione</dt>
-              <dd class="attivita-valore stato-consegnato">Gratuita</dd>
+              <dd class="attivita-valore">Gratuita</dd>
             </div>
           </dl>
 
@@ -132,8 +131,8 @@
     <div class="container">
       <div class="footer-box">
         <a class="brand" href="index.html">🎵 MusicHub</a>
-        <small class="footer-copy">© 2026 — Università</small>
-        <nav class="footer-nav">
+        <small class="footer-copy">20063338 — Uniupo</small>
+        <nav class="footer-nav" aria-label="Navigazione footer">
           <a href="strumenti.html">Strumenti</a>
           <a href="corsi.html">Lezioni</a>
           <a href="login.html">Accedi</a>

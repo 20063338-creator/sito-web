@@ -20,7 +20,7 @@
           <li><a href="corsi.html">Lezioni</a></li>
         </ul>
         <div class="nav-azioni">
-          <button id="tema">🌙</button>
+          <button id="tema" aria-label="Cambia tema chiaro/scuro">🌙</button>
           <span>Ciao, <strong>Marco</strong></span>
           <a href="login.html">Esci</a>
         </div>
@@ -28,21 +28,12 @@
     </div>
   </nav>
 
-  <div class="container py-2">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb-custom">
-        <li class="breadcrumb-item-custom"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item-custom"><a href="dashboard_insegnante.html">Dashboard</a></li>
-        <li class="breadcrumb-item-custom attivo">Prenotazioni</li>
-      </ol>
-    </nav>
-  </div>
 
   <div class="container py-4">
     <div class="row g-4">
 
       <aside class="col-lg-3">
-        <div class="filter-sidebar rounded-3 p-3">
+        <div class="sidebar-box rounded-3 p-3">
           <div class="d-flex align-items-center gap-3 mb-3 pb-3 sidebar-user-border">
             <div class="avatar flex-shrink-0">MR</div>
             <div>
@@ -51,11 +42,13 @@
             </div>
           </div>
           <nav>
+            
             <div class="d-flex flex-column gap-2">
               <a href="dashboard_insegnante.html" class="btn-scheda text-start">📊 Dashboard</a>
               <a href="prenotazioni_insegnante.html" class="btn-scheda text-start pill-tab-active">📅 Prenotazioni</a>
-              <a href="disponibilita_insegnante.html" class="btn-scheda text-start">⏰ Disponibilità</a>
-              <a href="aggiungi_corso.html" class="btn-scheda text-start">🎸 Aggiungi Corso</a>
+              <a href="corsi_insegnante.html" class="btn-scheda text-start dashboard-tabs-nav pill-tab-inactive">🎸 I miei corsi</a>
+              <a href="guadagni_insegnante.html" class="btn-scheda text-start dashboard-tabs-nav pill-tab-inactive">💰 Guadagni</a>
+              <a href="messaggi.html" class="btn-scheda text-start">💬 Messaggi</a>
             </div>
           </nav>
         </div>
@@ -81,7 +74,6 @@
                   </div>
                   <div class="text-end flex-shrink-0">
                     <p class="fw-bold mb-2 testo-oro">€ 30,00</p>
-                    <span class="ins-voto stato-consegnato">Confermata</span>
                   </div>
                 </div>
               </div>
@@ -102,7 +94,6 @@
                   </div>
                   <div class="text-end flex-shrink-0">
                     <p class="fw-bold mb-2 testo-oro">€ 35,00</p>
-                    <span class="ins-voto stato-consegnato">Confermata</span>
                   </div>
                 </div>
               </div>
@@ -171,8 +162,8 @@
     <div class="container">
       <div class="footer-box">
         <a class="brand" href="index.html">🎵 MusicHub</a>
-        <small class="footer-copy">© 2026 — Università</small>
-        <nav class="footer-nav">
+        <small class="footer-copy">20063338 — Uniupo</small>
+        <nav class="footer-nav" aria-label="Navigazione footer">
           <a href="strumenti.html">Strumenti</a>
           <a href="corsi.html">Lezioni</a>
           <a href="login.html">Accedi</a>

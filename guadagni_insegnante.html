@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guadagni — MusicHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-box">
+
+      <a class="brand" href="index.html">🎵 MusicHub</a>
+
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+
+      <div class="nav-menu">
+
+        <ul class="nav-links">
+          <li><a href="strumenti.html">Strumenti</a></li>
+          <li><a href="corsi.html">Lezioni</a></li>
+        </ul>
+
+        <div class="nav-azioni">
+          <button id="tema" aria-label="Cambia tema chiaro/scuro">🌙</button>
+          <span>Ciao, <strong>Marco</strong></span>
+          <a href="login.html">Esci</a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <div class="row g-4">
+
+      <!-- Sidebar -->
+      <aside class="col-lg-3">
+        <div class="sidebar-box rounded-3 p-3">
+
+          <div class="d-flex align-items-center gap-3 mb-3 pb-3 sidebar-user-border">
+            <div class="avatar flex-shrink-0">MR</div>
+
+            <div>
+              <p class="fw-semibold mb-0 small testo-bianco">Marco Rossi</p>
+              <p class="mb-0 testo-muted-inline testo-ruolo-small">Insegnante</p>
+            </div>
+          </div>
+
+          <nav>
+            <div class="nav flex-column gap-1">
+
+              <a href="dashboard_insegnante.html" class="btn-scheda text-start dashboard-tabs-nav pill-tab-inactive">
+                📊 Panoramica
+              </a>
+
+              <a href="prenotazioni_insegnante.html" class="btn-scheda text-start dashboard-tabs-nav pill-tab-inactive">
+                📅 Prenotazioni
+              </a>
+
+              <a href="corsi_insegnante.html" class="btn-scheda text-start dashboard-tabs-nav pill-tab-inactive">
+                🎸 I miei corsi
+              </a>
+
+              <a href="guadagni_insegnante.html" class="btn-scheda text-start dashboard-tabs-nav pill-tab-active">
+                💰 Guadagni
+              </a>
+
+              <a href="messaggi.html" class="btn-scheda text-start dashboard-tabs-nav">
+                💬 Messaggi
+              </a>
+
+            </div>
+          </nav>
+
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <main class="col-lg-9">
+
+        <h1 class="h4 fw-bold mb-4 testo-bianco">
+          Guadagni
+        </h1>
+
+        <!-- Statistiche -->
+        <div class="row g-3 mb-4">
+
+          <div class="col-sm-4">
+            <div class="stat-card">
+              <p class="stat-valore testo-oro">€ 120</p>
+              <p class="stat-etichetta">Questo mese</p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="stat-card">
+              <p class="stat-valore testo-oro">€ 420</p>
+              <p class="stat-etichetta">Ultimi 6 mesi</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Tabella -->
+        <h2 class="sezione-titolo mb-3">
+          Transazioni recenti
+        </h2>
+
+        <div class="table-wrapper">
+          <div class="table-responsive">
+
+            <table class="table mb-0 small table-styled">
+
+              <thead>
+                <tr>
+                  <th>Corso</th>
+                  <th>Studente</th>
+                  <th>Data</th>
+                  <th class="text-end">Importo</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>Chitarra per principianti</td>
+                  <td class="td-muted">Mario Rossi</td>
+                  <td class="td-muted">05/05/2026</td>
+                  <td class="text-end testo-oro">€ 30,00</td>
+                </tr>
+
+                <tr>
+                  <td>Chitarra per principianti</td>
+                  <td class="td-muted">Mario Rossi</td>
+                  <td class="td-muted">28/04/2026</td>
+                  <td class="text-end testo-oro">€ 30,00</td>
+                </tr>
+
+                <tr>
+                  <td>Chitarra intermedia</td>
+                  <td class="td-muted">Giulia F.</td>
+                  <td class="td-muted">22/04/2026</td>
+                  <td class="text-end testo-oro">€ 35,00</td>
+                </tr>
+
+                <tr>
+                  <td>Teoria musicale</td>
+                  <td class="td-muted">Luca P.</td>
+                  <td class="td-muted">19/05/2026</td>
+                  <td class="text-end testo-oro">€ 25,00</td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-box">
+
+        <a class="brand" href="index.html">🎵 MusicHub</a>
+        <small class="footer-copy">20063338 — Uniupo</small>
+
+        <nav class="footer-nav">
+          <a href="strumenti.html">Strumenti</a>
+          <a href="corsi.html">Lezioni</a>
+          <a href="login.html">Accedi</a>
+        </nav>
+
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('tema');
+    const html = document.documentElement;
+
+    if (localStorage.getItem('tema') === 'chiaro') {
+      html.setAttribute('data-tema', 'chiaro');
+      btn.textContent = '☀️';
+    }
+
+    btn.addEventListener('click', () => {
+      const t = html.getAttribute('data-tema');
+
+      if (t === 'chiaro') {
+        html.removeAttribute('data-tema');
+        btn.textContent = '🌙';
+        localStorage.setItem('tema', 'scuro');
+      } else {
+        html.setAttribute('data-tema', 'chiaro');
+        btn.textContent = '☀️';
+        localStorage.setItem('tema', 'chiaro');
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Strumenti Admin — MusicHub</title>
+  <title>Gestione Utenti — MusicHub</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- NAV -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-box">
       <a class="brand" href="index.html">🎵 MusicHub</a>
@@ -20,7 +20,7 @@
 
       <div class="nav-menu">
         <ul class="nav-links">
-          <li><a href="strumenti_admin.html" class="active">Strumenti</a></li>
+          <li><a href="strumenti_admin.html">Strumenti</a></li>
           <li><a href="corsi_admin.html">Lezioni</a></li>
         </ul>
 
@@ -42,18 +42,18 @@
         <div class="sidebar-box rounded-3 p-3">
 
           <div class="d-flex align-items-center gap-3 mb-3 pb-3 sidebar-user-border">
-            <div class="avatar">AD</div>
+            <div class="avatar flex-shrink-0">AD</div>
             <div>
               <p class="fw-semibold mb-0 small testo-bianco">Admin</p>
-              <p class="mb-0 testo-muted-inline">Pannello di controllo</p>
+              <p class="mb-0 testo-muted-inline testo-ruolo-small">Pannello di controllo</p>
             </div>
           </div>
 
           <nav class="d-flex flex-column gap-1">
             <a href="admin.html" class="btn-scheda text-start">📊 Panoramica</a>
-            <a href="utenti_admin.html" class="btn-scheda text-start">👥 Utenti</a>
+            <a href="utenti_admin.html" class="btn-scheda text-start pill-tab-active">👥 Utenti</a>
             <a href="insegnanti_admin.html" class="btn-scheda text-start">🎓 Insegnanti</a>
-            <a href="strumenti_admin.html" class="btn-scheda text-start pill-tab-active">🎸 Strumenti</a>
+            <a href="strumenti_admin.html" class="btn-scheda text-start">🎸 Strumenti</a>
             <a href="segnalazioni_admin.html" class="btn-scheda text-start">🚨 Segnalazioni</a>
           </nav>
 
@@ -64,57 +64,59 @@
       <main class="col-lg-9">
 
         <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
-          <h1 class="h4 fw-bold testo-bianco mb-0">Gestione strumenti</h1>
+          <h1 class="h4 fw-bold testo-bianco mb-0">Gestione utenti</h1>
 
-          <div class="d-flex gap-2">
-            <a href="aggiungi_strumento.html" class="btn-primary">➕ Aggiungi strumento</a>
+          <div class="input-group admin-cerca">
+            <input type="search" class="campo-input campo-input-left" placeholder="Cerca utente…">
+            <button class="btn-primary btn-cerca px-3" type="button">Cerca</button>
           </div>
         </div>
 
-        <!-- TABELLA -->
         <div class="table-wrapper">
           <div class="table-responsive">
             <table class="table mb-0 small table-styled">
 
               <thead>
                 <tr>
-                  <th>Strumento</th>
-                  <th>Prezzo</th>
-                  <th>Inserito il</th>
-                  <th>Azioni</th>
+                  <th>Nome</th>
+                  <th>Email</th>
+                  <th>Ruolo</th>
+                  <th>Iscritto il</th>
+                  <th></th>
                 </tr>
               </thead>
 
               <tbody>
-
                 <tr>
-                  <td>Fender CD-60S</td>
-                  <td class="testo-oro">€ 220,00</td>
-                  <td class="td-muted">02/05/2026</td>
-                  <td>
-                    <button class="btn-scheda btn-scheda-inline">Vedi</button>
-                    <button class="btn-rimuovi-sm">Rimuovi</button>
-                  </td>
+                  <td>Mario Rossi</td>
+                  <td class="td-muted">mario.rossi@email.it</td>
+                  <td>Cliente</td>
+                  <td class="td-muted">10/01/2026</td>
+                  <td><a href="utente.html" class="btn-scheda btn-scheda-inline">Vedi</a></td>
                 </tr>
 
                 <tr>
-                  <td>Yamaha PSR-E363</td>
-                  <td class="testo-oro">€ 180,00</td>
-                  <td class="td-muted">14/04/2026</td>
-                  <td>
-                    <button class="btn-scheda btn-scheda-inline">Vedi</button>
-                    <button class="btn-rimuovi-sm">Rimuovi</button>
-                  </td>
+                  <td>Marco Rossi</td>
+                  <td class="td-muted">marco.rossi@email.it</td>
+                  <td>Insegnante</td>
+                  <td class="td-muted">15/01/2026</td>
+                  <td><a href="profilo_insegnante_admin.html" class="btn-scheda btn-scheda-inline">Vedi</a></td>
                 </tr>
 
                 <tr>
-                  <td>Alesis Nitro Mesh</td>
-                  <td class="testo-oro">€ 350,00</td>
-                  <td class="td-muted">01/03/2026</td>
-                  <td>
-                    <button class="btn-scheda btn-scheda-inline">Vedi</button>
-                    <button class="btn-rimuovi-sm">Rimuovi</button>
-                  </td>
+                  <td>Anna Bianchi</td>
+                  <td class="td-muted">anna.b@email.it</td>
+                  <td>Cliente</td>
+                  <td class="td-muted">22/05/2026</td>
+                  <td><a href="utente.html" class="btn-scheda btn-scheda-inline">Vedi</a></td>
+                </tr>
+
+                <tr>
+                  <td>Roberto Neri</td>
+                  <td class="td-muted">r.neri@email.it</td>
+                  <td>Cliente</td>
+                  <td class="td-muted">03/03/2026</td>
+                  <td><a href="utente.html" class="btn-scheda btn-scheda-inline">Vedi</a></td>
                 </tr>
 
               </tbody>
@@ -167,6 +169,8 @@
       }
     });
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

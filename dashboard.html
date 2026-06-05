@@ -20,7 +20,7 @@
           <li><a href="corsi.html">Lezioni</a></li>
         </ul>
         <div class="nav-azioni">
-          <button id="tema">🌙</button>
+          <button id="tema" aria-label="Cambia tema chiaro/scuro">🌙</button>
           <span>Ciao, <strong>Mario</strong></span>
           <a href="login.html">Esci</a>
         </div>
@@ -33,7 +33,7 @@
 
       <!-- Sidebar navigazione -->
       <aside class="col-lg-3">
-        <div class="filter-sidebar rounded-3 p-3">
+        <div class="sidebar-box rounded-3 p-3">
           <div class="d-flex align-items-center gap-3 mb-3 pb-3 sidebar-user-border">
             <div class="avatar flex-shrink-0">MR</div>
             <div>
@@ -45,11 +45,11 @@
             <div class="nav flex-column gap-1" id="dashboard-tabs" role="tablist">
               <button class="btn-scheda text-start nav-link active dashboard-tabs-nav pill-tab-active"
                 data-bs-toggle="pill" data-bs-target="#tab-panoramica" role="tab">📊 Panoramica</button>
-              <button class="btn-scheda text-start nav-link dashboard-tabs-nav dashboard-tab-btn pill-tab-inactive"
+              <button class="btn-scheda text-start nav-link dashboard-tabs-nav pill-tab-inactive"
                 data-bs-toggle="pill" data-bs-target="#tab-acquisti" role="tab">🎸 I miei acquisti</button>
-              <button class="btn-scheda text-start nav-link dashboard-tabs-nav dashboard-tab-btn pill-tab-inactive"
+              <button class="btn-scheda text-start nav-link dashboard-tabs-nav pill-tab-inactive"
                 data-bs-toggle="pill" data-bs-target="#tab-lezioni" role="tab">📅 Le mie lezioni</button>
-              <button class="btn-scheda text-start nav-link dashboard-tabs-nav dashboard-tab-btn pill-tab-inactive"
+              <button class="btn-scheda text-start nav-link dashboard-tabs-nav pill-tab-inactive"
                 data-bs-toggle="pill" data-bs-target="#tab-profilo" role="tab">👤 Il mio profilo</button>
             </div>
           </nav>
@@ -63,27 +63,6 @@
           <!-- Panoramica -->
           <div class="tab-pane fade show active" id="tab-panoramica" role="tabpanel">
             <h1 class="h4 fw-bold mb-4 testo-bianco">Buongiorno, Mario 👋</h1>
-
-            <div class="row g-3 mb-4">
-              <div class="col-sm-4">
-                <div class="stat-card">
-                  <p class="stat-valore">3</p>
-                  <p class="stat-etichetta">Strumenti acquistati</p>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="stat-card">
-                  <p class="stat-valore">7</p>
-                  <p class="stat-etichetta">Lezioni prenotate</p>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="stat-card">
-                  <p class="stat-valore">2</p>
-                  <p class="stat-etichetta">Tutor seguiti</p>
-                </div>
-              </div>
-            </div>
 
             <div class="mb-4">
               <h2 class="sezione-titolo">Prossima lezione</h2>
@@ -292,8 +271,8 @@
     <div class="container">
       <div class="footer-box">
         <a class="brand" href="index.html">🎵 MusicHub</a>
-        <small class="footer-copy">© 2026 — Università</small>
-        <nav class="footer-nav">
+        <small class="footer-copy">20063338 — Uniupo</small>
+        <nav class="footer-nav" aria-label="Navigazione footer">
           <a href="strumenti.html">Strumenti</a>
           <a href="corsi.html">Lezioni</a>
           <a href="login.html">Accedi</a>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I miei corsi — MusicHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-box">
+
+      <a class="brand" href="index.html">🎵 MusicHub</a>
+
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">☰</label>
+
+      <div class="nav-menu">
+
+        <ul class="nav-links">
+          <li><a href="strumenti.html">Strumenti</a></li>
+          <li><a href="corsi.html">Lezioni</a></li>
+        </ul>
+
+        <div class="nav-azioni">
+          <button id="tema" aria-label="Cambia tema chiaro/scuro">🌙</button>
+          <span>Ciao, <strong>Marco</strong></span>
+          <a href="login.html">Esci</a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <div class="row g-4">
+
+      <aside class="col-lg-3">
+        <div class="sidebar-box rounded-3 p-3">
+
+          <div class="d-flex align-items-center gap-3 mb-3 pb-3 sidebar-user-border">
+            <div class="avatar">MR</div>
+
+            <div>
+              <p class="fw-semibold mb-0 small testo-bianco">Marco Rossi</p>
+              <p class="mb-0 testo-muted-inline testo-ruolo-small">Insegnante</p>
+            </div>
+          </div>
+
+          <nav>
+            <div class="d-flex flex-column gap-2">
+
+              <a href="dashboard_insegnante.html" class="btn-scheda text-start">
+                📊 Dashboard
+              </a>
+
+              <a href="prenotazioni_insegnante.html" class="btn-scheda text-start">
+                📅 Prenotazioni
+              </a>
+
+              <a href="corsi_insegnante.html" class="btn-scheda text-start pill-tab-active">
+                🎸 I miei corsi
+              </a>
+              
+              <a href="guadagni_insegnante.html" class="btn-scheda text-start dashboard-tabs-nav pill-tab-inactive">💰 Guadagni</a>
+              <a href="messaggi.html" class="btn-scheda text-start">
+                💬 Messaggi
+              </a>
+
+            </div>
+          </nav>
+
+        </div>
+      </aside>
+
+      <main class="col-lg-9">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h1 class="h4 fw-bold testo-bianco mb-0">I miei corsi</h1>
+          <a href="aggiungi_corso.html" class="btn-primary">+ Nuovo corso</a>
+        </div>
+
+        <div class="row g-3">
+
+          <div class="col-sm-6">
+            <div class="scheda-corso">
+
+              <h3 class="scheda-corso-titolo">Chitarra per principianti</h3>
+
+              <p class="scheda-corso-desc">
+                Parti da zero e impara le basi: accordi aperti, ritmo e le prime canzoni.
+              </p>
+
+              <div class="scheda-corso-footer">
+                <span class="scheda-corso-meta">60 min · Principiante</span>
+                <span class="scheda-corso-prezzo">€ 30</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="scheda-corso">
+
+              <h3 class="scheda-corso-titolo">Chitarra intermedia</h3>
+
+              <p class="scheda-corso-desc">
+                Improvvisazione base e analisi di brani.
+              </p>
+
+              <div class="scheda-corso-footer">
+                <span class="scheda-corso-meta">60 min · Intermedio</span>
+                <span class="scheda-corso-prezzo">€ 35</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="scheda-corso">
+
+              <h3 class="scheda-corso-titolo">Pianoforte per adulti</h3>
+
+              <p class="scheda-corso-desc">
+                Lezione pensata per chi inizia da zero, con brani moderni e classici.
+              </p>
+
+              <div class="scheda-corso-footer">
+                <span class="scheda-corso-meta">60 min · Principiante</span>
+                <span class="scheda-corso-prezzo">€ 30</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-box">
+
+        <a class="brand" href="index.html">🎵 MusicHub</a>
+        <small class="footer-copy">20063338 — Uniupo</small>
+
+        <nav class="footer-nav">
+          <a href="strumenti.html">Strumenti</a>
+          <a href="corsi.html">Lezioni</a>
+          <a href="login.html">Accedi</a>
+        </nav>
+
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('tema');
+    const html = document.documentElement;
+
+    if (localStorage.getItem('tema') === 'chiaro') {
+      html.setAttribute('data-tema', 'chiaro');
+      btn.textContent = '☀️';
+    }
+
+    btn.addEventListener('click', () => {
+      const t = html.getAttribute('data-tema');
+
+      if (t === 'chiaro') {
+        html.removeAttribute('data-tema');
+        btn.textContent = '🌙';
+        localStorage.setItem('tema', 'scuro');
+      } else {
+        html.setAttribute('data-tema', 'chiaro');
+        btn.textContent = '☀️';
+        localStorage.setItem('tema', 'chiaro');
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Strumenti Admin — MusicHub</title>
+  <title>Segnalazioni Admin — MusicHub</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -20,12 +20,12 @@
 
       <div class="nav-menu">
         <ul class="nav-links">
-          <li><a href="strumenti_admin.html" class="active">Strumenti</a></li>
+          <li><a href="strumenti_admin.html">Strumenti</a></li>
           <li><a href="corsi_admin.html">Lezioni</a></li>
         </ul>
 
         <div class="nav-azioni">
-          <button id="tema" aria-label="Cambia tema">🌙</button>
+          <button id="tema">🌙</button>
           <span class="ins-voto">Admin</span>
           <a href="login.html">Esci</a>
         </div>
@@ -53,8 +53,8 @@
             <a href="admin.html" class="btn-scheda text-start">📊 Panoramica</a>
             <a href="utenti_admin.html" class="btn-scheda text-start">👥 Utenti</a>
             <a href="insegnanti_admin.html" class="btn-scheda text-start">🎓 Insegnanti</a>
-            <a href="strumenti_admin.html" class="btn-scheda text-start pill-tab-active">🎸 Strumenti</a>
-            <a href="segnalazioni_admin.html" class="btn-scheda text-start">🚨 Segnalazioni</a>
+            <a href="strumenti_admin.html" class="btn-scheda text-start">🎸 Strumenti</a>
+            <a href="segnalazioni_admin.html" class="btn-scheda text-start pill-tab-active">🚨 Segnalazioni</a>
           </nav>
 
         </div>
@@ -63,64 +63,49 @@
       <!-- MAIN -->
       <main class="col-lg-9">
 
-        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
-          <h1 class="h4 fw-bold testo-bianco mb-0">Gestione strumenti</h1>
+        <h1 class="h4 fw-bold mb-4 testo-bianco">Segnalazioni</h1>
 
-          <div class="d-flex gap-2">
-            <a href="aggiungi_strumento.html" class="btn-primary">➕ Aggiungi strumento</a>
+        <div class="d-flex flex-column gap-3">
+
+          <!-- SEGNALAZIONE 1 -->
+          <div class="scheda-corso scheda-corso-inline-sm">
+
+            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
+              <div>
+                <p class="fw-semibold small mb-0 testo-bianco">🚨 Prezzo sospetto — Violino Steiner</p>
+                <p class="small mb-0 testo-muted-inline">Segnalato da Mario Rossi · 19/05/2026</p>
+              </div>
+            </div>
+
+            <p class="small testo-muted-inline mb-3">
+              Prezzo troppo basso
+            </p>
+
+            <div class="d-flex gap-2">
+              <button class="btn-scheda btn-scheda-inline">Rimuovi annuncio</button>
+              <button class="btn-outline btn-scheda-inline">Archivia</button>
+            </div>
+
           </div>
-        </div>
 
-        <!-- TABELLA -->
-        <div class="table-wrapper">
-          <div class="table-responsive">
-            <table class="table mb-0 small table-styled">
+          <!-- SEGNALAZIONE 2 -->
+          <div class="scheda-corso scheda-corso-inline-sm">
 
-              <thead>
-                <tr>
-                  <th>Strumento</th>
-                  <th>Prezzo</th>
-                  <th>Inserito il</th>
-                  <th>Azioni</th>
-                </tr>
-              </thead>
+            <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2">
+              <div>
+                <p class="fw-semibold small mb-0 testo-bianco">⚠️ Recensione offensiva</p>
+                <p class="small mb-0 testo-muted-inline">Segnalato da Marco Rossi · 15/05/2026</p>
+              </div>
+            </div>
 
-              <tbody>
+            <p class="small testo-muted-inline mb-3">La recensione conteneva linguaggio inappropriato</p>
 
-                <tr>
-                  <td>Fender CD-60S</td>
-                  <td class="testo-oro">€ 220,00</td>
-                  <td class="td-muted">02/05/2026</td>
-                  <td>
-                    <button class="btn-scheda btn-scheda-inline">Vedi</button>
-                    <button class="btn-rimuovi-sm">Rimuovi</button>
-                  </td>
-                </tr>
+            <div class="d-flex gap-2">
+              <button class="btn-outline btn-scheda-inline">Archivia</button>
+            </div>
 
-                <tr>
-                  <td>Yamaha PSR-E363</td>
-                  <td class="testo-oro">€ 180,00</td>
-                  <td class="td-muted">14/04/2026</td>
-                  <td>
-                    <button class="btn-scheda btn-scheda-inline">Vedi</button>
-                    <button class="btn-rimuovi-sm">Rimuovi</button>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Alesis Nitro Mesh</td>
-                  <td class="testo-oro">€ 350,00</td>
-                  <td class="td-muted">01/03/2026</td>
-                  <td>
-                    <button class="btn-scheda btn-scheda-inline">Vedi</button>
-                    <button class="btn-rimuovi-sm">Rimuovi</button>
-                  </td>
-                </tr>
-
-              </tbody>
-
-            </table>
           </div>
+
         </div>
 
       </main>

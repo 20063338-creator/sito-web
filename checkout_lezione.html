@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout — MusicHub</title>
+  <title>Pagamento lezione — MusicHub</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -29,45 +29,18 @@
   </nav>
 
 
+  <div class="container py-3">
+    <ol class="checkout-steps">
+      <li class="checkout-step step-fatto">Lezione</li>
+      <li class="checkout-step step-attivo">Pagamento</li>
+      <li class="checkout-step">Conferma</li>
+    </ol>
+  </div>
 
   <div class="container py-2 pb-5">
     <div class="row g-4">
 
       <main class="col-lg-8">
-
-        <!-- Indirizzo di spedizione -->
-        <section class="profilo-sezione">
-          <h2 class="sezione-titolo">Indirizzo di spedizione</h2>
-          <div class="rounded-3 p-4 form-profilo-bg">
-            <div class="row g-3">
-              <div class="col-sm-6">
-                <label for="nome-spedizione" class="campo-label">Nome</label>
-                <input type="text" id="nome-spedizione" class="campo-input" value="Mario" autocomplete="given-name">
-              </div>
-              <div class="col-sm-6">
-                <label for="cognome-spedizione" class="campo-label">Cognome</label>
-                <input type="text" id="cognome-spedizione" class="campo-input" value="Rossi" autocomplete="family-name">
-              </div>
-              <div class="col-12">
-                <label for="indirizzo" class="campo-label">Indirizzo</label>
-                <input type="text" id="indirizzo" class="campo-input" placeholder="Via e numero civico" autocomplete="street-address">
-              </div>
-              <div class="col-sm-6">
-                <label for="citta" class="campo-label">Città</label>
-                <input type="text" id="citta" class="campo-input" placeholder="Milano" autocomplete="address-level2">
-              </div>
-              <div class="col-sm-3">
-                <label for="cap" class="campo-label">CAP</label>
-                <input type="text" id="cap" class="campo-input" placeholder="20100" autocomplete="postal-code">
-              </div>
-              <div class="col-sm-3">
-                <label for="provincia" class="campo-label">Provincia</label>
-                <input type="text" id="provincia" class="campo-input" placeholder="MI">
-              </div>
-            </div>
-          </div>
-        </section>
-
         <!-- Metodo di pagamento -->
         <section class="profilo-sezione">
           <h2 class="sezione-titolo">Metodo di pagamento</h2>
@@ -117,25 +90,32 @@
             </div>
           </div>
         </section>
-
       </main>
 
       <aside class="col-lg-4">
         <div class="sidebar-prenotazione">
-          <h2 class="sidebar-titolo">Il tuo ordine</h2>
+          <h2 class="sidebar-titolo">La tua lezione</h2>
 
           <dl class="attivita-lista mb-3">
             <div class="attivita-riga">
-              <dt class="attivita-label">Fender CD-60S</dt>
-              <dd class="attivita-valore">€ 220,00</dd>
+              <dt class="attivita-label">Insegnante</dt>
+              <dd class="attivita-valore">Marco Rossi</dd>
             </div>
             <div class="attivita-riga">
-              <dt class="attivita-label">Yamaha PSR-E363</dt>
-              <dd class="attivita-valore">€ 180,00</dd>
+              <dt class="attivita-label">Corso</dt>
+              <dd class="attivita-valore">Chitarra per principianti</dd>
             </div>
             <div class="attivita-riga">
-              <dt class="attivita-label">Spedizione</dt>
-              <dd class="attivita-valore">Gratuita</dd>
+              <dt class="attivita-label">Data</dt>
+              <dd class="attivita-valore">Lun 19 maggio 2026</dd>
+            </div>
+            <div class="attivita-riga">
+              <dt class="attivita-label">Orario</dt>
+              <dd class="attivita-valore">18:00 – 19:00</dd>
+            </div>
+            <div class="attivita-riga">
+              <dt class="attivita-label">Durata</dt>
+              <dd class="attivita-valore">60 minuti</dd>
             </div>
           </dl>
 
@@ -143,17 +123,17 @@
 
           <div class="d-flex justify-content-between align-items-center mb-4">
             <span class="fw-bold testo-bianco">Totale</span>
-            <span class="dettaglio-prezzo">€ 400,00</span>
+            <span class="dettaglio-prezzo">€ 30,00</span>
           </div>
 
-          <a href="conferma_ordine.html" class="btn-primary auth-btn-full">Conferma e paga</a>
+          <a href="conferma_lezione.html" class="btn-primary auth-btn-full">Conferma e paga</a>
 
           <div class="avviso-login mt-3">
             🔒 I tuoi dati di pagamento sono protetti e cifrati
           </div>
 
           <p class="testo-muted-inline small text-center mt-3 mb-0">
-            Tornare al <a href="carrello.html" class="auth-link-oro">carrello</a>
+            Tornare al <a href="profilo_insegnante.html" class="auth-link-oro">profilo del tutor</a>
           </p>
         </div>
       </aside>
@@ -176,25 +156,5 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const btn  = document.getElementById('tema');
-    const html = document.documentElement;
-    if (localStorage.getItem('tema') === 'chiaro') {
-      html.setAttribute('data-tema', 'chiaro');
-      btn.textContent = '☀️';
-    }
-    btn.addEventListener('click', () => {
-      const t = html.getAttribute('data-tema');
-      if (t === 'chiaro') {
-        html.removeAttribute('data-tema');
-        btn.textContent = '🌙';
-        localStorage.setItem('tema', 'scuro');
-      } else {
-        html.setAttribute('data-tema', 'chiaro');
-        btn.textContent = '☀️';
-        localStorage.setItem('tema', 'chiaro');
-      }
-    });
-  </script>
 </body>
 </html>

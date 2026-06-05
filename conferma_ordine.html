@@ -20,7 +20,7 @@
           <li><a href="corsi.html">Lezioni</a></li>
         </ul>
         <div class="nav-azioni">
-          <button id="tema">🌙</button>
+          <button id="tema" aria-label="Cambia tema chiaro/scuro">🌙</button>
           <span>Ciao, <strong>Mario</strong></span>
           <a href="login.html">Esci</a>
         </div>
@@ -28,14 +28,6 @@
     </div>
   </nav>
 
-  <!-- Step indicator -->
-  <div class="container py-3">
-    <ol class="checkout-steps">
-      <li class="checkout-step step-fatto">Carrello</li>
-      <li class="checkout-step step-fatto">Pagamento</li>
-      <li class="checkout-step step-attivo">Conferma</li>
-    </ol>
-  </div>
 
   <main class="container py-4 pb-5">
 
@@ -44,7 +36,7 @@
       <div class="conferma-icona">✅</div>
       <h1 class="conferma-titolo">Ordine confermato!</h1>
       <p class="conferma-sottotitolo">Grazie Mario, il tuo ordine è stato ricevuto correttamente.</p>
-      <p class="testo-muted-inline small">Numero ordine: <strong class="testo-oro">#MH-2026-00847</strong></p>
+      <p class="testo-muted-inline small">Numero ordine: <strong class="testo-oro">#ESEMPIO-0001</strong></p>
     </div>
 
     <div class="row g-4 justify-content-center">
@@ -59,23 +51,17 @@
                 <thead>
                   <tr>
                     <th>Strumento</th>
-                    <th>Venditore</th>
                     <th class="text-end">Importo</th>
-                    <th>Stato</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>Fender CD-60S</td>
-                    <td class="td-muted">Luigi V.</td>
                     <td class="text-end">€ 220,00</td>
-                    <td><span class="ins-voto">In preparazione</span></td>
                   </tr>
                   <tr>
                     <td>Yamaha PSR-E363</td>
-                    <td class="td-muted">MusicHub Store</td>
                     <td class="text-end">€ 180,00</td>
-                    <td><span class="ins-voto">In preparazione</span></td>
                   </tr>
                 </tbody>
               </table>
@@ -108,36 +94,9 @@
           </div>
         </section>
 
-        <!-- Prossimi passi -->
-        <section class="profilo-sezione">
-          <h2 class="sezione-titolo">Cosa succede adesso?</h2>
-          <div class="passi-lista passi-lista-verticale">
-            <div class="passo passo-conferma">
-              <div class="passo-num">1</div>
-              <div>
-                <h3 class="passo-titolo">Email di conferma</h3>
-                <p class="passo-testo">Ti abbiamo inviato un'email a mario.rossi@email.it con il riepilogo dell'ordine.</p>
-              </div>
-            </div>
-            <div class="passo passo-conferma">
-              <div class="passo-num">2</div>
-              <div>
-                <h3 class="passo-titolo">Preparazione</h3>
-                <p class="passo-testo">Il venditore preparerà il pacco entro 1–2 giorni lavorativi.</p>
-              </div>
-            </div>
-            <div class="passo passo-conferma">
-              <div class="passo-num">3</div>
-              <div>
-                <h3 class="passo-titolo">Spedizione</h3>
-                <p class="passo-testo">Riceverai un'email con il codice di tracciamento non appena il pacco sarà affidato al corriere.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        
         <div class="d-flex flex-wrap gap-3">
-          <a href="dashboard.html" class="btn-primary">Vai alla dashboard</a>
+          <a href="dashboard.html" class="btn-primary">I miei acquisti</a>
           <a href="strumenti.html" class="btn-outline">Continua lo shopping</a>
         </div>
 
@@ -150,8 +109,8 @@
     <div class="container">
       <div class="footer-box">
         <a class="brand" href="index.html">🎵 MusicHub</a>
-        <small class="footer-copy">© 2026 — Università</small>
-        <nav class="footer-nav">
+        <small class="footer-copy">20063338 — Uniupo</small>
+        <nav class="footer-nav" aria-label="Navigazione footer">
           <a href="strumenti.html">Strumenti</a>
           <a href="corsi.html">Lezioni</a>
           <a href="login.html">Accedi</a>
