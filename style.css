@@ -1,7 +1,5 @@
-/* ===================== FONT ===================== */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
 
-/* ===================== VARIABILI ===================== */
 :root {
   --blu:        #0D1B3E;
   --blu-medio:  #162347;
@@ -32,32 +30,9 @@
   color: #1a1208;
 }
 
-/* ===================== RESET ===================== */
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
-/* ===================== UTILITY CLASSES ===================== */
-/* TEXT SIZING - Standardizzati 5 livelli */
-
-/* TEXT STYLING */
-
-/* CARD BASE - Standard per tutte le card/container */
-
-/* FLEXBOX UTILITIES */
-
-/* GAP UTILITIES */
-
-/* PADDING UTILITY VARIANTS */
-
-
-/* BORDER UTILITIES */
-
-/* HOVER UTILITIES */
-
-/* BUTTON BASE - Per bottoni base (da usare con modifiche specifiche) */
-
-/* BUTTON DANGER - Per bottoni di rimozione/cancellazione */
 
 body {
   font-family: 'DM Sans', system-ui, sans-serif;
@@ -83,7 +58,7 @@ a {
   color: rgba(92,74,32,0.75);
 }
 
-/* ===================== NAVBAR ===================== */
+/* NAVBAR */
 .navbar {
   background: var(--blu);
   border-bottom: 1px solid var(--bordo);
@@ -292,7 +267,7 @@ a {
   color: var(--oro);
 }
 
-/* ===================== HERO ===================== */
+/* HERO  */
 .hero {
   background: linear-gradient(140deg, var(--blu) 0%, #162040 60%, #1a2a50 100%);
   border-bottom: 1px solid var(--bordo);
@@ -376,7 +351,7 @@ a {
   border-radius: 0.875rem;
 }
 
-/* ===================== CATALOGO ===================== */
+/*  CATALOGO  */
 .catalogo {
   padding: 3.75rem 0;
   background: var(--blu);
@@ -452,12 +427,19 @@ a {
 
 .scheda-img {
   height: 10rem;
-  background: linear-gradient(135deg, var(--blu-chiaro) 0%, var(--blu-medio) 100%);
   border-bottom: 1px solid var(--bordo);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--blu-chiaro) 0%, var(--blu-medio) 100%);
+}
+
+.scheda-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .scheda-info {
@@ -508,7 +490,7 @@ a {
   color: var(--blu);
 }
 
-/* ===================== INSEGNANTI ===================== */
+/*  INSEGNANTI  */
 .griglia-ins {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -631,7 +613,7 @@ a {
 }
 
 
-/* ===================== FOOTER ===================== */
+/*  FOOTER  */
 .footer {
   background: var(--blu-medio);
   border-top: 1px solid var(--bordo);
@@ -665,7 +647,7 @@ a {
   color: var(--oro);
 }
 
-/* ===================== COMPONENTI VARI ===================== */
+/*  COMPONENTI VARI */
 
 
 
@@ -688,7 +670,6 @@ a {
   font-weight: 600;
 }
 
-/* Titolo sezione con sottolineatura (usato nei profili) */
 .sezione-titolo {
   font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
@@ -701,7 +682,6 @@ a {
 }
 
 
-/* Dashboard stat card */
 .stat-card {
   @extend .card-base;
   padding: 1.5rem;
@@ -723,7 +703,7 @@ a {
 }
 
 
-/* ===================== AUTH ===================== */
+/*  AUTH  */
 
 .auth-main {
   padding: 3.75rem 0;
@@ -780,7 +760,6 @@ a {
   padding-top: 1.5rem;
 }
 
-/* Allinea le righe nome/cognome ai campi a tutta larghezza (niente sporgenza) */
 .auth-tab-content .row {
   margin-left: 0;
   margin-right: 0;
@@ -927,9 +906,7 @@ a {
   margin-bottom: 0;
   font-size: 0.84rem;
   color: var(--testo-muted);
-}
-
-/* ===================== BREADCRUMB ===================== */
+}/*  BREADCRUMB  */
 .breadcrumb-custom {
   list-style: none;
   padding: 0;
@@ -955,7 +932,7 @@ a {
   color: var(--oro);
 }
 
-/* ===================== PROFILO INSEGNANTE ===================== */
+/*  PROFILO INSEGNANTE  */
 .profilo-intestazione {
   display: flex;
   gap: 1.5rem;
@@ -1097,7 +1074,7 @@ a {
   margin-bottom: 1rem;
 }
 
-/* ===================== RESPONSIVE ===================== */
+/*  RESPONSIVE  */
 @media (max-width: 992px) {
   .hero-foto {
     flex: 0 0 21.25rem;
@@ -1146,8 +1123,6 @@ a {
     font-size: 1.2rem;
   }
 }
-
-/* Sidebar filtri / dashboard */
 .sidebar-box {
   background: var(--blu-medio);
   border: 1px solid var(--bordo);
@@ -1155,12 +1130,11 @@ a {
 
 
 
-/* ===================== DASHBOARD TABLE STYLING ===================== */
+/*  DASHBOARD TABLE STYLING  */
 .table tbody {
   background: var(--blu-chiaro);
 }
 
-/* Dashboard — tab/nav e tabelle */
 .dashboard-tabs-nav {
   border-radius: 0.5rem;
   padding: 0.5rem 0.75rem;
@@ -1271,7 +1245,6 @@ a {
   border-bottom: 1px solid var(--bordo);
 }
 
-/* Liste corsi/strumenti — badge e ordinamento */
 .btn-cerca {
   border-radius: 0 0.5rem 0.5rem 0;
 }
@@ -1308,7 +1281,6 @@ a {
   flex: 1;
 }
 
-/* Dashboard pill tab active */
 .pill-tab-active {
   background: var(--oro);
   color: var(--blu);
@@ -1319,7 +1291,6 @@ a {
   color: var(--oro);
 }
 
-/* Strumenti: badge usato/nuovo */
 .testo-ruolo-small {
   font-size: 0.8rem;
 }
@@ -1328,9 +1299,8 @@ a {
   font-size: 0.75rem;
 }
 
-/* ===================== UTENTE — PAGINA PROFILO ===================== */
+/*  UTENTE — PAGINA PROFILO  */
 
-/* Avatar grande profilo utente */
 .avatar-lg {
   width: 5rem;
   height: 5rem;
@@ -1345,7 +1315,6 @@ a {
   flex-shrink: 0;
 }
 
-/* Chip strumenti di interesse */
 .interesse-chip {
   display: inline-flex;
   align-items: center;
@@ -1364,14 +1333,12 @@ a {
   border-color: var(--oro);
   color: var(--oro);
 }
-/* Stato attivo gestito da :has(input:checked) — niente JS */
 .interesse-chip:has(input:checked) {
   border-color: var(--oro);
   color: var(--oro);
   font-weight: 600;
 }
 
-/* Riepilogo attività — dl/dt/dd semantici */
 .attivita-lista {
   display: flex;
   flex-direction: column;
@@ -1398,7 +1365,6 @@ a {
   color: var(--oro);
 }
 
-/* Zona pericolosa */
 .sezione-titolo-danger {
   color: #e74c3c;
 }
@@ -1430,12 +1396,6 @@ a {
   background: rgba(255,255,255,0.05);
 }
 
-/* ============================================================
-   COMPONENTI PAGINE INTERNE
-   (carrello, checkout, conferma, dettaglio, admin, ecc.)
-   ============================================================ */
-
-/* ----- Carrello ----- */
 .carrello-item {
   display: flex;
   align-items: center;
@@ -1468,7 +1428,6 @@ a {
 
 .select-qty { width: auto; }
 
-/* ----- Checkout: indicatore a step ----- */
 .checkout-steps {
   list-style: none;
   display: flex;
@@ -1499,7 +1458,6 @@ a {
   border-color: var(--oro);
 }
 
-/* ----- Pagine di conferma ----- */
 .conferma-hero {
   text-align: center;
   padding: 2rem 1rem 1.5rem;
@@ -1534,7 +1492,6 @@ a {
   color: var(--bianco);
 }
 
-/* ----- Dettaglio strumento ----- */
 .dettaglio-img-box {
   background: linear-gradient(135deg, var(--blu-chiaro) 0%, var(--blu-medio) 100%);
   border: 1px solid var(--bordo);
@@ -1544,8 +1501,12 @@ a {
   align-items: center;
   justify-content: center;
 }
-.dettaglio-emoji {
-  font-size: 5rem;
+.dettaglio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.875rem;
 }
 .dettaglio-header {
   display: flex;
@@ -1625,7 +1586,6 @@ a {
   color: var(--testo-muted);
 }
 
-/* ----- Admin ----- */
 .admin-cerca {
   max-width: 22.5rem;
   width: 100%;
@@ -1639,8 +1599,6 @@ a {
   background: rgba(230,126,34,0.12);
 }
 
-
-/* ----- Disponibilita insegnante ----- */
 .alert-info-custom {
   background: var(--oro-glow);
   border: 1px solid var(--bordo);
@@ -1659,8 +1617,6 @@ a {
 .btn-piccolo:hover {
   border-color: var(--oro);
 }
-
-/* ----- Login: intestazione (nomi usati nell'HTML) ----- */
 .auth-header {
   text-align: center;
   margin-bottom: 1.5rem;
@@ -1671,12 +1627,10 @@ a {
   margin: 0;
 }
 
-/* ----- Utility ----- */
 .testo-muted {
   color: var(--testo-muted);
 }
 
-/* ----- Barra forza password (unificata) ----- */
 .barra-forza-contenitore {
   height: 0.3125rem;
   border-radius: 0.1875rem;
@@ -1713,7 +1667,6 @@ a {
   min-height: 1.2rem;
 }
 
-/* ----- Responsive componenti pagine interne ----- */
 @media (max-width: 576px) {
   .carrello-item {
     flex-direction: column;
@@ -1737,7 +1690,6 @@ a {
   }
 }
 
-/* ----- Messaggi / chat ----- */
 .chat-conversazioni {
   display: flex;
   flex-direction: column;
@@ -1837,7 +1789,7 @@ a {
 .chat-input-riga .campo-input { flex: 1; }
 
 
-/* ----- Pagina 404: violino ----- */
+/*  Pagina 404  */
 .v404 .corpo {
   fill: var(--blu-medio);
   stroke: var(--oro);
@@ -1868,7 +1820,6 @@ a {
   stroke-linecap: round;
 }
 
-/* ----- Pagina 404 ----- */
 .errore-404 {
   text-align: center;
   max-width: 35rem;
@@ -1896,11 +1847,8 @@ a {
   margin-top: 1.5rem;
 }
 
-
-/* utility testo ripristinate */
 .testo-bianco { color: var(--bianco); }
 .testo-muted-inline { color: var(--testo-muted); }
 .testo-oro { color: var(--oro); }
 
-/* header stabile: barra di scorrimento sempre presente */
 html { overflow-y: scroll; }

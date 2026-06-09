@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard — MusicHub</title>
+  <title>I miei acquisti — MusicHub</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -44,8 +44,8 @@
             </div>
           </div>
           <nav class="d-flex flex-column gap-1">
-            <a href="dashboard.html" class="btn-scheda text-start pill-tab-active">📊 Panoramica</a>
-            <a href="dashboard_acquisti.html" class="btn-scheda text-start">🎸 I miei acquisti</a>
+            <a href="dashboard.html" class="btn-scheda text-start">📊 Panoramica</a>
+            <a href="dashboard_acquisti.html" class="btn-scheda text-start pill-tab-active">🎸 I miei acquisti</a>
             <a href="dashboard_lezioni.html" class="btn-scheda text-start">📅 Le mie lezioni</a>
             <a href="dashboard_profilo.html" class="btn-scheda text-start">👤 Il mio profilo</a>
           </nav>
@@ -55,63 +55,40 @@
       <!-- MAIN -->
       <main class="col-lg-9">
 
-        <h1 class="h4 fw-bold mb-4 testo-bianco">Buongiorno, Mario 👋</h1>
+        <h1 class="h4 fw-bold mb-4 testo-bianco">I miei acquisti</h1>
 
-        <!-- Prossima lezione -->
-        <div class="mb-4">
-          <h2 class="sezione-titolo">Prossima lezione</h2>
-          <div class="scheda-corso scheda-corso-inline d-flex justify-content-between align-items-center flex-wrap gap-3">
-            <div class="d-flex align-items-center gap-3">
-              <div class="avatar flex-shrink-0">MR</div>
-              <div>
-                <p class="fw-semibold mb-0 small testo-bianco">Chitarra per principianti</p>
-                <p class="small mb-0 testo-muted-inline">con Marco Rossi</p>
-              </div>
-            </div>
-            <div class="text-end">
-              <p class="fw-semibold mb-0 small testo-bianco">Lunedì 19 maggio 2026</p>
-              <p class="small mb-0 testo-muted-inline">ore 10:00 · 60 min</p>
-            </div>
-            <button class="btn-outline btn-annulla">Annulla</button>
-          </div>
-        </div>
-
-        <!-- Ultimi acquisti -->
-        <div>
-          <h2 class="sezione-titolo">Ultimi acquisti</h2>
-          <div class="table-wrapper">
-            <div class="table-responsive">
-              <table class="table mb-0 small table-styled">
-                <thead>
-                  <tr>
-                    <th scope="col">Strumento</th>
-                    <th scope="col">Data</th>
-                    <th scope="col" class="text-end">Importo</th>
-                    <th scope="col">Stato</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Fender CD-60S</td>
-                    <td class="td-muted">02/05/2026</td>
-                    <td class="text-end">€ 220,00</td>
-                    <td><span class="ins-voto stato-consegnato">Consegnato</span></td>
-                  </tr>
-                  <tr>
-                    <td>Yamaha PSR-E363</td>
-                    <td class="td-muted">14/04/2026</td>
-                    <td class="text-end">€ 180,00</td>
-                    <td><span class="ins-voto stato-consegnato">Consegnato</span></td>
-                  </tr>
-                  <tr>
-                    <td>Stentor Student II</td>
-                    <td class="td-muted">01/03/2026</td>
-                    <td class="text-end">€ 150,00</td>
-                    <td><span class="ins-voto stato-consegnato">Consegnato</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+        <div class="table-wrapper">
+          <div class="table-responsive">
+            <table class="table mb-0 small table-styled">
+              <thead>
+                <tr>
+                  <th scope="col">Strumento</th>
+                  <th scope="col">Data</th>
+                  <th scope="col">Stato</th>
+                  <th scope="col" class="text-end">Importo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Fender CD-60S</td>
+                  <td class="td-muted">02/05/2026</td>
+                  <td><span class="ins-voto stato-consegnato">Consegnato</span></td>
+                  <td class="text-end">€ 220,00</td>
+                </tr>
+                <tr>
+                  <td>Yamaha PSR-E363</td>
+                  <td class="td-muted">14/04/2026</td>
+                  <td><span class="ins-voto stato-consegnato">Consegnato</span></td>
+                  <td class="text-end">€ 180,00</td>
+                </tr>
+                <tr>
+                  <td>Stentor Student II</td>
+                  <td class="td-muted">01/03/2026</td>
+                  <td><span class="ins-voto stato-consegnato">Consegnato</span></td>
+                  <td class="text-end">€ 150,00</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
